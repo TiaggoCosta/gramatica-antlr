@@ -1,9 +1,33 @@
 grammar Gramatica;
 
+options {
+	language=Java;
+}
+
+prog returns [ double v ]   :
+
+	(e = expr {$v = $e.v;} {System.out.println("Resultado: " + $v);}  NEWLINE*)+ 
+	;
+
+expr returns [ double v ]:
+	INT {$v = Double.parseDouble( $INT.text);} 
+    ('+' e = expr {$v += $e.v;} 
+    | '-' e = expr {$v -= $e.v;} 
+    | '*' e = expr {$v *= $e.v;} 
+    | '/' e = expr {$v /= $e.v;})
+
+    |	INT {$v = Double.parseDouble( $INT.text);}
+
+    |	'(' e = expr {$v = $e.v;} ')'
+    ;
+
 VAR  :	('a'..'z'|'A'..'Z')+
     ;
 
 INT :	'0'..'9'+
+    ;
+
+NEWLINE : ('\r' | '\n')+ 
     ;
 
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*

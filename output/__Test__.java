@@ -6,12 +6,12 @@ import org.antlr.runtime.debug.DebugEventSocketProxy;
 public class __Test__ {
 
     public static void main(String args[]) throws Exception {
-        TLexer lex = new TLexer(new ANTLRFileStream("C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\output\\__Test___input.txt", "UTF8"));
+        GramaticaLexer lex = new GramaticaLexer(new ANTLRFileStream("C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
-        TParser g = new TParser(tokens, 49100, null);
+        GramaticaParser g = new GramaticaParser(tokens, 49100, null);
         try {
-            g.r();
+            g.prog();
         } catch (RecognitionException e) {
             e.printStackTrace();
         }
