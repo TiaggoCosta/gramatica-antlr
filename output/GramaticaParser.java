@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-10-17 20:36:25
+// $ANTLR 3.5.1 C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-10-17 21:11:29
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -46,7 +46,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "expr", "prog"
+		"invalidRule", "prog", "expr"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {

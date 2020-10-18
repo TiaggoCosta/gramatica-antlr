@@ -20,7 +20,17 @@ expr returns [ double v ]:
 
     |	'(' e = expr {$v = $e.v;} ')'
     ;
-
+/* 
+rel returns [ boolean v ]: 
+    expr 
+    ( '='  e = expr {$v == $e.v;} 
+    | '<>' e = expr {$v != $e.v;} 
+    | '<'  e = expr {$v <  $e.v;} 
+    | '>'  e = expr {$v >  $e.v;}
+    | '<=' e = expr {$v <= $e.v;}
+    | '>=' e = expr {$v >= $e.v;})
+    ;
+ */
 VAR  :	('a'..'z'|'A'..'Z')+
     ;
 
