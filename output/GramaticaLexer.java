@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-10-17 21:11:32
+// $ANTLR 3.5.1 C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g 2020-10-25 18:42:08
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,26 +8,24 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class GramaticaLexer extends Lexer {
 	public static final int EOF=-1;
+	public static final int T__7=7;
+	public static final int T__8=8;
+	public static final int T__9=9;
+	public static final int T__10=10;
+	public static final int T__11=11;
+	public static final int T__12=12;
+	public static final int T__13=13;
+	public static final int T__14=14;
+	public static final int T__15=15;
+	public static final int T__16=16;
+	public static final int T__17=17;
 	public static final int T__18=18;
 	public static final int T__19=19;
 	public static final int T__20=20;
 	public static final int T__21=21;
-	public static final int T__22=22;
-	public static final int T__23=23;
-	public static final int CHAR=4;
-	public static final int COMMENT=5;
-	public static final int ESC_SEQ=6;
-	public static final int EXPONENT=7;
-	public static final int FLOAT=8;
-	public static final int HEX_DIGIT=9;
-	public static final int ID=10;
-	public static final int INT=11;
-	public static final int NEWLINE=12;
-	public static final int OCTAL_ESC=13;
-	public static final int STRING=14;
-	public static final int UNICODE_ESC=15;
-	public static final int VAR=16;
-	public static final int WS=17;
+	public static final int INT=4;
+	public static final int VAR=5;
+	public static final int WS=6;
 
 	// delegates
 	// delegators
@@ -42,17 +40,239 @@ public class GramaticaLexer extends Lexer {
 	public GramaticaLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g"; }
+
+	// $ANTLR start "T__7"
+	public final void mT__7() throws RecognitionException {
+		try {
+			int _type = T__7;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:7:6: ( '(' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:7:8: '('
+			{
+			match('('); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__7"
+
+	// $ANTLR start "T__8"
+	public final void mT__8() throws RecognitionException {
+		try {
+			int _type = T__8;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:8:6: ( ')' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:8:8: ')'
+			{
+			match(')'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__8"
+
+	// $ANTLR start "T__9"
+	public final void mT__9() throws RecognitionException {
+		try {
+			int _type = T__9;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:9:6: ( '*' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:9:8: '*'
+			{
+			match('*'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__9"
+
+	// $ANTLR start "T__10"
+	public final void mT__10() throws RecognitionException {
+		try {
+			int _type = T__10;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:10:7: ( '+' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:10:9: '+'
+			{
+			match('+'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__10"
+
+	// $ANTLR start "T__11"
+	public final void mT__11() throws RecognitionException {
+		try {
+			int _type = T__11;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:11:7: ( '-' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:11:9: '-'
+			{
+			match('-'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__11"
+
+	// $ANTLR start "T__12"
+	public final void mT__12() throws RecognitionException {
+		try {
+			int _type = T__12;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:12:7: ( '/' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:12:9: '/'
+			{
+			match('/'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__12"
+
+	// $ANTLR start "T__13"
+	public final void mT__13() throws RecognitionException {
+		try {
+			int _type = T__13;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:13:7: ( ';' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:13:9: ';'
+			{
+			match(';'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__13"
+
+	// $ANTLR start "T__14"
+	public final void mT__14() throws RecognitionException {
+		try {
+			int _type = T__14;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:14:7: ( '<' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:14:9: '<'
+			{
+			match('<'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__14"
+
+	// $ANTLR start "T__15"
+	public final void mT__15() throws RecognitionException {
+		try {
+			int _type = T__15;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:15:7: ( '<=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:15:9: '<='
+			{
+			match("<="); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__15"
+
+	// $ANTLR start "T__16"
+	public final void mT__16() throws RecognitionException {
+		try {
+			int _type = T__16;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:16:7: ( '<>' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:16:9: '<>'
+			{
+			match("<>"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__16"
+
+	// $ANTLR start "T__17"
+	public final void mT__17() throws RecognitionException {
+		try {
+			int _type = T__17;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:17:7: ( '=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:17:9: '='
+			{
+			match('='); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__17"
 
 	// $ANTLR start "T__18"
 	public final void mT__18() throws RecognitionException {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:7:7: ( '(' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:7:9: '('
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:18:7: ( '>' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:18:9: '>'
 			{
-			match('('); 
+			match('>'); 
 			}
 
 			state.type = _type;
@@ -69,10 +289,11 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:8:7: ( ')' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:8:9: ')'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:19:7: ( '>=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:19:9: '>='
 			{
-			match(')'); 
+			match(">="); 
+
 			}
 
 			state.type = _type;
@@ -89,10 +310,11 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:7: ( '*' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:9: '*'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:7: ( 'do' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:9: 'do'
 			{
-			match('*'); 
+			match("do"); 
+
 			}
 
 			state.type = _type;
@@ -109,10 +331,11 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:10:7: ( '+' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:10:9: '+'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:21:7: ( 'while' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:21:9: 'while'
 			{
-			match('+'); 
+			match("while"); 
+
 			}
 
 			state.type = _type;
@@ -124,69 +347,29 @@ public class GramaticaLexer extends Lexer {
 	}
 	// $ANTLR end "T__21"
 
-	// $ANTLR start "T__22"
-	public final void mT__22() throws RecognitionException {
+	// $ANTLR start "INT"
+	public final void mINT() throws RecognitionException {
 		try {
-			int _type = T__22;
+			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:11:7: ( '-' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:11:9: '-'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:52:5: ( ( '0' .. '9' )+ )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:52:7: ( '0' .. '9' )+
 			{
-			match('-'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__22"
-
-	// $ANTLR start "T__23"
-	public final void mT__23() throws RecognitionException {
-		try {
-			int _type = T__23;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:12:7: ( '/' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:12:9: '/'
-			{
-			match('/'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__23"
-
-	// $ANTLR start "VAR"
-	public final void mVAR() throws RecognitionException {
-		try {
-			int _type = VAR;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:34:6: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:34:8: ( 'a' .. 'z' | 'A' .. 'Z' )+
-			{
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:34:8: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:52:7: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( ((LA1_0 >= 'A' && LA1_0 <= 'Z')||(LA1_0 >= 'a' && LA1_0 <= 'z')) ) {
+				if ( ((LA1_0 >= '0' && LA1_0 <= '9')) ) {
 					alt1=1;
 				}
 
 				switch (alt1) {
 				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
+					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:
 					{
-					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
 					}
 					else {
@@ -214,31 +397,31 @@ public class GramaticaLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "VAR"
+	// $ANTLR end "INT"
 
-	// $ANTLR start "INT"
-	public final void mINT() throws RecognitionException {
+	// $ANTLR start "VAR"
+	public final void mVAR() throws RecognitionException {
 		try {
-			int _type = INT;
+			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:37:5: ( ( '0' .. '9' )+ )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:37:7: ( '0' .. '9' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:53:6: ( ( 'a' .. 'z' )+ )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:53:8: ( 'a' .. 'z' )+
 			{
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:37:7: ( '0' .. '9' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:53:8: ( 'a' .. 'z' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
 				int alt2=2;
 				int LA2_0 = input.LA(1);
-				if ( ((LA2_0 >= '0' && LA2_0 <= '9')) ) {
+				if ( ((LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
 					alt2=1;
 				}
 
 				switch (alt2) {
 				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
+					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:
 					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+					if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -266,31 +449,31 @@ public class GramaticaLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "INT"
+	// $ANTLR end "VAR"
 
-	// $ANTLR start "NEWLINE"
-	public final void mNEWLINE() throws RecognitionException {
+	// $ANTLR start "WS"
+	public final void mWS() throws RecognitionException {
 		try {
-			int _type = NEWLINE;
+			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:40:9: ( ( '\\r' | '\\n' )+ )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:40:11: ( '\\r' | '\\n' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:55:5: ( ( ' ' | '\\n' | '\\r' )+ )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:55:7: ( ' ' | '\\n' | '\\r' )+
 			{
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:40:11: ( '\\r' | '\\n' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:55:7: ( ' ' | '\\n' | '\\r' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
 				int alt3=2;
 				int LA3_0 = input.LA(1);
-				if ( (LA3_0=='\n'||LA3_0=='\r') ) {
+				if ( (LA3_0=='\n'||LA3_0=='\r'||LA3_0==' ') ) {
 					alt3=1;
 				}
 
 				switch (alt3) {
 				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
+					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:
 					{
-					if ( input.LA(1)=='\n'||input.LA(1)=='\r' ) {
+					if ( input.LA(1)=='\n'||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
 					}
 					else {
@@ -309,436 +492,7 @@ public class GramaticaLexer extends Lexer {
 				cnt3++;
 			}
 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "NEWLINE"
-
-	// $ANTLR start "ID"
-	public final void mID() throws RecognitionException {
-		try {
-			int _type = ID;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:43:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:43:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-			{
-			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
-				input.consume();
-			}
-			else {
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				recover(mse);
-				throw mse;
-			}
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:43:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-			loop4:
-			while (true) {
-				int alt4=2;
-				int LA4_0 = input.LA(1);
-				if ( ((LA4_0 >= '0' && LA4_0 <= '9')||(LA4_0 >= 'A' && LA4_0 <= 'Z')||LA4_0=='_'||(LA4_0 >= 'a' && LA4_0 <= 'z')) ) {
-					alt4=1;
-				}
-
-				switch (alt4) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
-				default :
-					break loop4;
-				}
-			}
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "ID"
-
-	// $ANTLR start "FLOAT"
-	public final void mFLOAT() throws RecognitionException {
-		try {
-			int _type = FLOAT;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
-			int alt11=3;
-			alt11 = dfa11.predict(input);
-			switch (alt11) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
-					{
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:9: ( '0' .. '9' )+
-					int cnt5=0;
-					loop5:
-					while (true) {
-						int alt5=2;
-						int LA5_0 = input.LA(1);
-						if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
-							alt5=1;
-						}
-
-						switch (alt5) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							if ( cnt5 >= 1 ) break loop5;
-							EarlyExitException eee = new EarlyExitException(5, input);
-							throw eee;
-						}
-						cnt5++;
-					}
-
-					match('.'); 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:25: ( '0' .. '9' )*
-					loop6:
-					while (true) {
-						int alt6=2;
-						int LA6_0 = input.LA(1);
-						if ( ((LA6_0 >= '0' && LA6_0 <= '9')) ) {
-							alt6=1;
-						}
-
-						switch (alt6) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							break loop6;
-						}
-					}
-
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:37: ( EXPONENT )?
-					int alt7=2;
-					int LA7_0 = input.LA(1);
-					if ( (LA7_0=='E'||LA7_0=='e') ) {
-						alt7=1;
-					}
-					switch (alt7) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:37: EXPONENT
-							{
-							mEXPONENT(); 
-
-							}
-							break;
-
-					}
-
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
-					{
-					match('.'); 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:13: ( '0' .. '9' )+
-					int cnt8=0;
-					loop8:
-					while (true) {
-						int alt8=2;
-						int LA8_0 = input.LA(1);
-						if ( ((LA8_0 >= '0' && LA8_0 <= '9')) ) {
-							alt8=1;
-						}
-
-						switch (alt8) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							if ( cnt8 >= 1 ) break loop8;
-							EarlyExitException eee = new EarlyExitException(8, input);
-							throw eee;
-						}
-						cnt8++;
-					}
-
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:25: ( EXPONENT )?
-					int alt9=2;
-					int LA9_0 = input.LA(1);
-					if ( (LA9_0=='E'||LA9_0=='e') ) {
-						alt9=1;
-					}
-					switch (alt9) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:25: EXPONENT
-							{
-							mEXPONENT(); 
-
-							}
-							break;
-
-					}
-
-					}
-					break;
-				case 3 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:49:9: ( '0' .. '9' )+ EXPONENT
-					{
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:49:9: ( '0' .. '9' )+
-					int cnt10=0;
-					loop10:
-					while (true) {
-						int alt10=2;
-						int LA10_0 = input.LA(1);
-						if ( ((LA10_0 >= '0' && LA10_0 <= '9')) ) {
-							alt10=1;
-						}
-
-						switch (alt10) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-							{
-							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							if ( cnt10 >= 1 ) break loop10;
-							EarlyExitException eee = new EarlyExitException(10, input);
-							throw eee;
-						}
-						cnt10++;
-					}
-
-					mEXPONENT(); 
-
-					}
-					break;
-
-			}
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "FLOAT"
-
-	// $ANTLR start "COMMENT"
-	public final void mCOMMENT() throws RecognitionException {
-		try {
-			int _type = COMMENT;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-			int alt15=2;
-			int LA15_0 = input.LA(1);
-			if ( (LA15_0=='/') ) {
-				int LA15_1 = input.LA(2);
-				if ( (LA15_1=='/') ) {
-					alt15=1;
-				}
-				else if ( (LA15_1=='*') ) {
-					alt15=2;
-				}
-
-				else {
-					int nvaeMark = input.mark();
-					try {
-						input.consume();
-						NoViableAltException nvae =
-							new NoViableAltException("", 15, 1, input);
-						throw nvae;
-					} finally {
-						input.rewind(nvaeMark);
-					}
-				}
-
-			}
-
-			else {
-				NoViableAltException nvae =
-					new NoViableAltException("", 15, 0, input);
-				throw nvae;
-			}
-
-			switch (alt15) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
-					{
-					match("//"); 
-
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:14: (~ ( '\\n' | '\\r' ) )*
-					loop12:
-					while (true) {
-						int alt12=2;
-						int LA12_0 = input.LA(1);
-						if ( ((LA12_0 >= '\u0000' && LA12_0 <= '\t')||(LA12_0 >= '\u000B' && LA12_0 <= '\f')||(LA12_0 >= '\u000E' && LA12_0 <= '\uFFFF')) ) {
-							alt12=1;
-						}
-
-						switch (alt12) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-							{
-							if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
-								input.consume();
-							}
-							else {
-								MismatchedSetException mse = new MismatchedSetException(null,input);
-								recover(mse);
-								throw mse;
-							}
-							}
-							break;
-
-						default :
-							break loop12;
-						}
-					}
-
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:28: ( '\\r' )?
-					int alt13=2;
-					int LA13_0 = input.LA(1);
-					if ( (LA13_0=='\r') ) {
-						alt13=1;
-					}
-					switch (alt13) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:28: '\\r'
-							{
-							match('\r'); 
-							}
-							break;
-
-					}
-
-					match('\n'); 
-					_channel=HIDDEN;
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:54:9: '/*' ( options {greedy=false; } : . )* '*/'
-					{
-					match("/*"); 
-
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:54:14: ( options {greedy=false; } : . )*
-					loop14:
-					while (true) {
-						int alt14=2;
-						int LA14_0 = input.LA(1);
-						if ( (LA14_0=='*') ) {
-							int LA14_1 = input.LA(2);
-							if ( (LA14_1=='/') ) {
-								alt14=2;
-							}
-							else if ( ((LA14_1 >= '\u0000' && LA14_1 <= '.')||(LA14_1 >= '0' && LA14_1 <= '\uFFFF')) ) {
-								alt14=1;
-							}
-
-						}
-						else if ( ((LA14_0 >= '\u0000' && LA14_0 <= ')')||(LA14_0 >= '+' && LA14_0 <= '\uFFFF')) ) {
-							alt14=1;
-						}
-
-						switch (alt14) {
-						case 1 :
-							// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:54:42: .
-							{
-							matchAny(); 
-							}
-							break;
-
-						default :
-							break loop14;
-						}
-					}
-
-					match("*/"); 
-
-					_channel=HIDDEN;
-					}
-					break;
-
-			}
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "COMMENT"
-
-	// $ANTLR start "WS"
-	public final void mWS() throws RecognitionException {
-		try {
-			int _type = WS;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:57:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:57:9: ( ' ' | '\\t' | '\\r' | '\\n' )
-			{
-			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
-				input.consume();
-			}
-			else {
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				recover(mse);
-				throw mse;
-			}
-			_channel=HIDDEN;
+			skip();
 			}
 
 			state.type = _type;
@@ -750,728 +504,333 @@ public class GramaticaLexer extends Lexer {
 	}
 	// $ANTLR end "WS"
 
-	// $ANTLR start "STRING"
-	public final void mSTRING() throws RecognitionException {
-		try {
-			int _type = STRING;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+	@Override
+	public void mTokens() throws RecognitionException {
+		// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:8: ( T__7 | T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | INT | VAR | WS )
+		int alt4=18;
+		switch ( input.LA(1) ) {
+		case '(':
 			{
-			match('\"'); 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
-			loop16:
-			while (true) {
-				int alt16=3;
-				int LA16_0 = input.LA(1);
-				if ( (LA16_0=='\\') ) {
-					alt16=1;
-				}
-				else if ( ((LA16_0 >= '\u0000' && LA16_0 <= '!')||(LA16_0 >= '#' && LA16_0 <= '[')||(LA16_0 >= ']' && LA16_0 <= '\uFFFF')) ) {
-					alt16=2;
-				}
-
-				switch (alt16) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:14: ESC_SEQ
-					{
-					mESC_SEQ(); 
-
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:24: ~ ( '\\\\' | '\"' )
-					{
-					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
-				default :
-					break loop16;
-				}
+			alt4=1;
 			}
-
-			match('\"'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "STRING"
-
-	// $ANTLR start "CHAR"
-	public final void mCHAR() throws RecognitionException {
-		try {
-			int _type = CHAR;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			break;
+		case ')':
 			{
-			match('\''); 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
-			int alt17=2;
-			int LA17_0 = input.LA(1);
-			if ( (LA17_0=='\\') ) {
-				alt17=1;
+			alt4=2;
 			}
-			else if ( ((LA17_0 >= '\u0000' && LA17_0 <= '&')||(LA17_0 >= '(' && LA17_0 <= '[')||(LA17_0 >= ']' && LA17_0 <= '\uFFFF')) ) {
-				alt17=2;
+			break;
+		case '*':
+			{
+			alt4=3;
+			}
+			break;
+		case '+':
+			{
+			alt4=4;
+			}
+			break;
+		case '-':
+			{
+			alt4=5;
+			}
+			break;
+		case '/':
+			{
+			alt4=6;
+			}
+			break;
+		case ';':
+			{
+			alt4=7;
+			}
+			break;
+		case '<':
+			{
+			switch ( input.LA(2) ) {
+			case '=':
+				{
+				alt4=9;
+				}
+				break;
+			case '>':
+				{
+				alt4=10;
+				}
+				break;
+			default:
+				alt4=8;
+			}
+			}
+			break;
+		case '=':
+			{
+			alt4=11;
+			}
+			break;
+		case '>':
+			{
+			int LA4_10 = input.LA(2);
+			if ( (LA4_10=='=') ) {
+				alt4=13;
 			}
 
 			else {
-				NoViableAltException nvae =
-					new NoViableAltException("", 17, 0, input);
-				throw nvae;
+				alt4=12;
 			}
 
-			switch (alt17) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:15: ESC_SEQ
-					{
-					mESC_SEQ(); 
-
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:25: ~ ( '\\'' | '\\\\' )
-					{
-					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
 			}
-
-			match('\''); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "CHAR"
-
-	// $ANTLR start "EXPONENT"
-	public final void mEXPONENT() throws RecognitionException {
-		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:73:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:73:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			break;
+		case 'd':
 			{
-			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
-				input.consume();
+			int LA4_11 = input.LA(2);
+			if ( (LA4_11=='o') ) {
+				int LA4_21 = input.LA(3);
+				if ( ((LA4_21 >= 'a' && LA4_21 <= 'z')) ) {
+					alt4=17;
+				}
+
+				else {
+					alt4=14;
+				}
+
 			}
+
 			else {
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				recover(mse);
-				throw mse;
-			}
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:73:22: ( '+' | '-' )?
-			int alt18=2;
-			int LA18_0 = input.LA(1);
-			if ( (LA18_0=='+'||LA18_0=='-') ) {
-				alt18=1;
-			}
-			switch (alt18) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-					{
-					if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
-			}
-
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:73:33: ( '0' .. '9' )+
-			int cnt19=0;
-			loop19:
-			while (true) {
-				int alt19=2;
-				int LA19_0 = input.LA(1);
-				if ( ((LA19_0 >= '0' && LA19_0 <= '9')) ) {
-					alt19=1;
-				}
-
-				switch (alt19) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
-					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
-				default :
-					if ( cnt19 >= 1 ) break loop19;
-					EarlyExitException eee = new EarlyExitException(19, input);
-					throw eee;
-				}
-				cnt19++;
+				alt4=17;
 			}
 
 			}
-
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "EXPONENT"
-
-	// $ANTLR start "HEX_DIGIT"
-	public final void mHEX_DIGIT() throws RecognitionException {
-		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:76:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:
+			break;
+		case 'w':
 			{
-			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
-				input.consume();
-			}
-			else {
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				recover(mse);
-				throw mse;
-			}
-			}
+			int LA4_12 = input.LA(2);
+			if ( (LA4_12=='h') ) {
+				int LA4_22 = input.LA(3);
+				if ( (LA4_22=='i') ) {
+					int LA4_24 = input.LA(4);
+					if ( (LA4_24=='l') ) {
+						int LA4_25 = input.LA(5);
+						if ( (LA4_25=='e') ) {
+							int LA4_26 = input.LA(6);
+							if ( ((LA4_26 >= 'a' && LA4_26 <= 'z')) ) {
+								alt4=17;
+							}
 
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "HEX_DIGIT"
+							else {
+								alt4=15;
+							}
 
-	// $ANTLR start "ESC_SEQ"
-	public final void mESC_SEQ() throws RecognitionException {
-		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:80:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
-			int alt20=3;
-			int LA20_0 = input.LA(1);
-			if ( (LA20_0=='\\') ) {
-				switch ( input.LA(2) ) {
-				case '\"':
-				case '\'':
-				case '\\':
-				case 'b':
-				case 'f':
-				case 'n':
-				case 'r':
-				case 't':
-					{
-					alt20=1;
-					}
-					break;
-				case 'u':
-					{
-					alt20=2;
-					}
-					break;
-				case '0':
-				case '1':
-				case '2':
-				case '3':
-				case '4':
-				case '5':
-				case '6':
-				case '7':
-					{
-					alt20=3;
-					}
-					break;
-				default:
-					int nvaeMark = input.mark();
-					try {
-						input.consume();
-						NoViableAltException nvae =
-							new NoViableAltException("", 20, 1, input);
-						throw nvae;
-					} finally {
-						input.rewind(nvaeMark);
-					}
-				}
-			}
-
-			else {
-				NoViableAltException nvae =
-					new NoViableAltException("", 20, 0, input);
-				throw nvae;
-			}
-
-			switch (alt20) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:80:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
-					{
-					match('\\'); 
-					if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:81:9: UNICODE_ESC
-					{
-					mUNICODE_ESC(); 
-
-					}
-					break;
-				case 3 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:82:9: OCTAL_ESC
-					{
-					mOCTAL_ESC(); 
-
-					}
-					break;
-
-			}
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "ESC_SEQ"
-
-	// $ANTLR start "OCTAL_ESC"
-	public final void mOCTAL_ESC() throws RecognitionException {
-		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:87:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
-			int alt21=3;
-			int LA21_0 = input.LA(1);
-			if ( (LA21_0=='\\') ) {
-				int LA21_1 = input.LA(2);
-				if ( ((LA21_1 >= '0' && LA21_1 <= '3')) ) {
-					int LA21_2 = input.LA(3);
-					if ( ((LA21_2 >= '0' && LA21_2 <= '7')) ) {
-						int LA21_4 = input.LA(4);
-						if ( ((LA21_4 >= '0' && LA21_4 <= '7')) ) {
-							alt21=1;
 						}
 
 						else {
-							alt21=2;
+							alt4=17;
 						}
 
 					}
 
 					else {
-						alt21=3;
-					}
-
-				}
-				else if ( ((LA21_1 >= '4' && LA21_1 <= '7')) ) {
-					int LA21_3 = input.LA(3);
-					if ( ((LA21_3 >= '0' && LA21_3 <= '7')) ) {
-						alt21=2;
-					}
-
-					else {
-						alt21=3;
+						alt4=17;
 					}
 
 				}
 
 				else {
-					int nvaeMark = input.mark();
-					try {
-						input.consume();
-						NoViableAltException nvae =
-							new NoViableAltException("", 21, 1, input);
-						throw nvae;
-					} finally {
-						input.rewind(nvaeMark);
-					}
+					alt4=17;
 				}
 
 			}
 
 			else {
-				NoViableAltException nvae =
-					new NoViableAltException("", 21, 0, input);
-				throw nvae;
+				alt4=17;
 			}
 
-			switch (alt21) {
-				case 1 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:87:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
-					{
-					match('\\'); 
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:88:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
-					{
-					match('\\'); 
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-				case 3 :
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:89:9: '\\\\' ( '0' .. '7' )
-					{
-					match('\\'); 
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
-						input.consume();
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						recover(mse);
-						throw mse;
-					}
-					}
-					break;
-
 			}
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "OCTAL_ESC"
-
-	// $ANTLR start "UNICODE_ESC"
-	public final void mUNICODE_ESC() throws RecognitionException {
-		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:94:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:94:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			break;
+		case '0':
+		case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9':
 			{
-			match('\\'); 
-			match('u'); 
-			mHEX_DIGIT(); 
-
-			mHEX_DIGIT(); 
-
-			mHEX_DIGIT(); 
-
-			mHEX_DIGIT(); 
-
+			alt4=16;
 			}
-
+			break;
+		case 'a':
+		case 'b':
+		case 'c':
+		case 'e':
+		case 'f':
+		case 'g':
+		case 'h':
+		case 'i':
+		case 'j':
+		case 'k':
+		case 'l':
+		case 'm':
+		case 'n':
+		case 'o':
+		case 'p':
+		case 'q':
+		case 'r':
+		case 's':
+		case 't':
+		case 'u':
+		case 'v':
+		case 'x':
+		case 'y':
+		case 'z':
+			{
+			alt4=17;
+			}
+			break;
+		case '\n':
+		case '\r':
+		case ' ':
+			{
+			alt4=18;
+			}
+			break;
+		default:
+			NoViableAltException nvae =
+				new NoViableAltException("", 4, 0, input);
+			throw nvae;
 		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "UNICODE_ESC"
-
-	@Override
-	public void mTokens() throws RecognitionException {
-		// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:8: ( T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | VAR | INT | NEWLINE | ID | FLOAT | COMMENT | WS | STRING | CHAR )
-		int alt22=15;
-		alt22 = dfa22.predict(input);
-		switch (alt22) {
+		switch (alt4) {
 			case 1 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:10: T__18
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:10: T__7
+				{
+				mT__7(); 
+
+				}
+				break;
+			case 2 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:15: T__8
+				{
+				mT__8(); 
+
+				}
+				break;
+			case 3 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:20: T__9
+				{
+				mT__9(); 
+
+				}
+				break;
+			case 4 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:25: T__10
+				{
+				mT__10(); 
+
+				}
+				break;
+			case 5 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:31: T__11
+				{
+				mT__11(); 
+
+				}
+				break;
+			case 6 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:37: T__12
+				{
+				mT__12(); 
+
+				}
+				break;
+			case 7 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:43: T__13
+				{
+				mT__13(); 
+
+				}
+				break;
+			case 8 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:49: T__14
+				{
+				mT__14(); 
+
+				}
+				break;
+			case 9 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:55: T__15
+				{
+				mT__15(); 
+
+				}
+				break;
+			case 10 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:61: T__16
+				{
+				mT__16(); 
+
+				}
+				break;
+			case 11 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:67: T__17
+				{
+				mT__17(); 
+
+				}
+				break;
+			case 12 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:73: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
-			case 2 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:16: T__19
+			case 13 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:79: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
-			case 3 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:22: T__20
+			case 14 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:85: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
-			case 4 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:28: T__21
+			case 15 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:91: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
-			case 5 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:34: T__22
-				{
-				mT__22(); 
-
-				}
-				break;
-			case 6 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:40: T__23
-				{
-				mT__23(); 
-
-				}
-				break;
-			case 7 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:46: VAR
-				{
-				mVAR(); 
-
-				}
-				break;
-			case 8 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:50: INT
+			case 16 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:97: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 9 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:54: NEWLINE
+			case 17 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:101: VAR
 				{
-				mNEWLINE(); 
+				mVAR(); 
 
 				}
 				break;
-			case 10 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:62: ID
-				{
-				mID(); 
-
-				}
-				break;
-			case 11 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:65: FLOAT
-				{
-				mFLOAT(); 
-
-				}
-				break;
-			case 12 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:71: COMMENT
-				{
-				mCOMMENT(); 
-
-				}
-				break;
-			case 13 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:79: WS
+			case 18 :
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:105: WS
 				{
 				mWS(); 
 
 				}
 				break;
-			case 14 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:82: STRING
-				{
-				mSTRING(); 
-
-				}
-				break;
-			case 15 :
-				// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:1:89: CHAR
-				{
-				mCHAR(); 
-
-				}
-				break;
 
 		}
 	}
 
 
-	protected DFA11 dfa11 = new DFA11(this);
-	protected DFA22 dfa22 = new DFA22(this);
-	static final String DFA11_eotS =
-		"\5\uffff";
-	static final String DFA11_eofS =
-		"\5\uffff";
-	static final String DFA11_minS =
-		"\2\56\3\uffff";
-	static final String DFA11_maxS =
-		"\1\71\1\145\3\uffff";
-	static final String DFA11_acceptS =
-		"\2\uffff\1\2\1\1\1\3";
-	static final String DFA11_specialS =
-		"\5\uffff}>";
-	static final String[] DFA11_transitionS = {
-			"\1\2\1\uffff\12\1",
-			"\1\3\1\uffff\12\1\13\uffff\1\4\37\uffff\1\4",
-			"",
-			"",
-			""
-	};
-
-	static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
-	static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
-	static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
-	static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
-	static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
-	static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
-	static final short[][] DFA11_transition;
-
-	static {
-		int numStates = DFA11_transitionS.length;
-		DFA11_transition = new short[numStates][];
-		for (int i=0; i<numStates; i++) {
-			DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
-		}
-	}
-
-	protected class DFA11 extends DFA {
-
-		public DFA11(BaseRecognizer recognizer) {
-			this.recognizer = recognizer;
-			this.decisionNumber = 11;
-			this.eot = DFA11_eot;
-			this.eof = DFA11_eof;
-			this.min = DFA11_min;
-			this.max = DFA11_max;
-			this.accept = DFA11_accept;
-			this.special = DFA11_special;
-			this.transition = DFA11_transition;
-		}
-		@Override
-		public String getDescription() {
-			return "46:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
-		}
-	}
-
-	static final String DFA22_eotS =
-		"\6\uffff\1\20\1\21\1\23\11\uffff\1\21\2\uffff";
-	static final String DFA22_eofS =
-		"\25\uffff";
-	static final String DFA22_minS =
-		"\1\11\5\uffff\1\52\1\60\1\56\11\uffff\1\60\2\uffff";
-	static final String DFA22_maxS =
-		"\1\172\5\uffff\1\57\1\172\1\145\11\uffff\1\172\2\uffff";
-	static final String DFA22_acceptS =
-		"\1\uffff\1\1\1\2\1\3\1\4\1\5\3\uffff\1\11\1\12\1\13\1\15\1\16\1\17\1\14"+
-		"\1\6\1\7\1\uffff\1\10\1\11";
-	static final String DFA22_specialS =
-		"\25\uffff}>";
-	static final String[] DFA22_transitionS = {
-			"\1\14\1\11\2\uffff\1\11\22\uffff\1\14\1\uffff\1\15\4\uffff\1\16\1\1\1"+
-			"\2\1\3\1\4\1\uffff\1\5\1\13\1\6\12\10\7\uffff\32\7\4\uffff\1\12\1\uffff"+
-			"\32\7",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"\1\17\4\uffff\1\17",
-			"\12\12\7\uffff\32\22\4\uffff\1\12\1\uffff\32\22",
-			"\1\13\1\uffff\12\10\13\uffff\1\13\37\uffff\1\13",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"\12\12\7\uffff\32\22\4\uffff\1\12\1\uffff\32\22",
-			"",
-			""
-	};
-
-	static final short[] DFA22_eot = DFA.unpackEncodedString(DFA22_eotS);
-	static final short[] DFA22_eof = DFA.unpackEncodedString(DFA22_eofS);
-	static final char[] DFA22_min = DFA.unpackEncodedStringToUnsignedChars(DFA22_minS);
-	static final char[] DFA22_max = DFA.unpackEncodedStringToUnsignedChars(DFA22_maxS);
-	static final short[] DFA22_accept = DFA.unpackEncodedString(DFA22_acceptS);
-	static final short[] DFA22_special = DFA.unpackEncodedString(DFA22_specialS);
-	static final short[][] DFA22_transition;
-
-	static {
-		int numStates = DFA22_transitionS.length;
-		DFA22_transition = new short[numStates][];
-		for (int i=0; i<numStates; i++) {
-			DFA22_transition[i] = DFA.unpackEncodedString(DFA22_transitionS[i]);
-		}
-	}
-
-	protected class DFA22 extends DFA {
-
-		public DFA22(BaseRecognizer recognizer) {
-			this.recognizer = recognizer;
-			this.decisionNumber = 22;
-			this.eot = DFA22_eot;
-			this.eof = DFA22_eof;
-			this.min = DFA22_min;
-			this.max = DFA22_max;
-			this.accept = DFA22_accept;
-			this.special = DFA22_special;
-			this.transition = DFA22_transition;
-		}
-		@Override
-		public String getDescription() {
-			return "1:1: Tokens : ( T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | VAR | INT | NEWLINE | ID | FLOAT | COMMENT | WS | STRING | CHAR );";
-		}
-	}
 
 }
