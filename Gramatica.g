@@ -21,7 +21,7 @@ comando:
 	//| teste
     //| atribuicao
 	iteracao
-	|  expr 
+	| e = expr {System.out.println("Resultado: " + $e.v);} // só para teste 
 	;
 
 iteracao:
@@ -30,14 +30,11 @@ iteracao:
 
 expr returns [ double v ]:
 	INT {$v = Double.parseDouble( $INT.text);} 
-    ('+' e = expr {$v += $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
-    | '-' e = expr {$v -= $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
-    | '*' e = expr {$v *= $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
-    | '/' e = expr {$v /= $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
+    ('+' e = expr {$v += $e.v;} 
+    | '-' e = expr {$v -= $e.v;} 
+    | '*' e = expr {$v *= $e.v;} 
+    | '/' e = expr {$v /= $e.v;} 
     )
-
-    |	INT {$v = Double.parseDouble( $INT.text);}
-
     |	'(' e = expr {$v = $e.v;} ')'
     ;
 
