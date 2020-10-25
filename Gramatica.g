@@ -21,7 +21,7 @@ comando:
 	//| teste
     //| atribuicao
 	iteracao
-	| e = expr {System.out.println("Resultado: " + $e.v);} // só para teste 
+	| (e = expr {System.out.println("Resultado: " + $e.v);})+ // só para teste 
 	;
 
 iteracao:
@@ -34,6 +34,7 @@ expr returns [ double v ]:
     | '-' e = expr {$v -= $e.v;} 
     | '*' e = expr {$v *= $e.v;} 
     | '/' e = expr {$v /= $e.v;} 
+    |
     )
     |	'(' e = expr {$v = $e.v;} ')'
     ;
