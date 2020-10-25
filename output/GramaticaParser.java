@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g 2020-10-25 18:42:08
+// $ANTLR 3.5.1 C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g 2020-10-25 18:47:23
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -11,8 +11,8 @@ import java.io.IOException;
 public class GramaticaParser extends DebugParser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "INT", "VAR", "WS", "'('", "')'", 
-		"'*'", "'+'", "'-'", "'/'", "';'", "'<'", "'<='", "'<>'", "'='", "'>'", 
-		"'>='", "'do'", "'while'"
+		"'*'", "'+'", "'-'", "'/'", "'<'", "'<='", "'<>'", "'='", "'>'", "'>='", 
+		"'do'", "'while'"
 	};
 	public static final int EOF=-1;
 	public static final int T__7=7;
@@ -29,7 +29,6 @@ public class GramaticaParser extends DebugParser {
 	public static final int T__18=18;
 	public static final int T__19=19;
 	public static final int T__20=20;
-	public static final int T__21=21;
 	public static final int INT=4;
 	public static final int VAR=5;
 	public static final int WS=6;
@@ -43,7 +42,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "comando", "iteracao", "stat", "rel", "expr", "prog"
+		"invalidRule", "rel", "expr", "iteracao", "comando", "prog", "stat"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -111,7 +110,7 @@ public class GramaticaParser extends DebugParser {
 				try { dbg.enterDecision(1, decisionCanBacktrack[1]);
 
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0==21) ) {
+				if ( (LA1_0==20) ) {
 					alt1=1;
 				}
 
@@ -206,7 +205,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "iteracao"
-	// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:1: iteracao : 'while' rel 'do' ( comando )+ ';' ;
+	// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:1: iteracao : 'while' rel 'do' ( comando )+ ;
 	public final void iteracao() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "iteracao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -214,18 +213,18 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(20, 0);
 
 		try {
-			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:9: ( 'while' rel 'do' ( comando )+ ';' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:9: ( 'while' rel 'do' ( comando )+ )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:21:2: 'while' rel 'do' ( comando )+ ';'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:21:2: 'while' rel 'do' ( comando )+
 			{
 			dbg.location(21,2);
-			match(input,21,FOLLOW_21_in_iteracao52); dbg.location(21,10);
+			match(input,20,FOLLOW_20_in_iteracao52); dbg.location(21,10);
 			pushFollow(FOLLOW_rel_in_iteracao54);
 			rel();
 			state._fsp--;
 			dbg.location(21,14);
-			match(input,20,FOLLOW_20_in_iteracao56); dbg.location(21,19);
+			match(input,19,FOLLOW_19_in_iteracao56); dbg.location(21,19);
 			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:21:19: ( comando )+
 			int cnt2=0;
 			try { dbg.enterSubRule(2);
@@ -235,11 +234,23 @@ public class GramaticaParser extends DebugParser {
 				int alt2=2;
 				try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
-				int LA2_0 = input.LA(1);
-				if ( (LA2_0==INT||LA2_0==7||LA2_0==21) ) {
+				switch ( input.LA(1) ) {
+				case 20:
+					{
 					alt2=1;
+					}
+					break;
+				case INT:
+					{
+					alt2=1;
+					}
+					break;
+				case 7:
+					{
+					alt2=1;
+					}
+					break;
 				}
-
 				} finally {dbg.exitDecision(2);}
 
 				switch (alt2) {
@@ -266,8 +277,7 @@ public class GramaticaParser extends DebugParser {
 				cnt2++;
 			}
 			} finally {dbg.exitSubRule(2);}
-			dbg.location(21,28);
-			match(input,13,FOLLOW_13_in_iteracao61); 
+
 			}
 
 		}
@@ -306,7 +316,7 @@ public class GramaticaParser extends DebugParser {
 			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
 			int LA3_0 = input.LA(1);
-			if ( (LA3_0==21) ) {
+			if ( (LA3_0==20) ) {
 				alt3=1;
 			}
 			else if ( (LA3_0==INT||LA3_0==7) ) {
@@ -329,7 +339,7 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:26:2: iteracao
 					{
 					dbg.location(26,2);
-					pushFollow(FOLLOW_iteracao_in_comando74);
+					pushFollow(FOLLOW_iteracao_in_comando72);
 					iteracao();
 					state._fsp--;
 
@@ -341,7 +351,7 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:27:4: expr
 					{
 					dbg.location(27,4);
-					pushFollow(FOLLOW_expr_in_comando79);
+					pushFollow(FOLLOW_expr_in_comando77);
 					expr();
 					state._fsp--;
 
@@ -397,7 +407,7 @@ public class GramaticaParser extends DebugParser {
 				if ( ((LA5_1 >= 9 && LA5_1 <= 12)) ) {
 					alt5=1;
 				}
-				else if ( (LA5_1==INT||(LA5_1 >= 7 && LA5_1 <= 8)||LA5_1==13||(LA5_1 >= 20 && LA5_1 <= 21)) ) {
+				else if ( (LA5_1==EOF||LA5_1==INT||(LA5_1 >= 7 && LA5_1 <= 8)||(LA5_1 >= 19 && LA5_1 <= 20)) ) {
 					alt5=2;
 				}
 
@@ -435,7 +445,7 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:31:2: INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr )
 					{
 					dbg.location(31,2);
-					INT1=(Token)match(input,INT,FOLLOW_INT_in_expr93); dbg.location(31,6);
+					INT1=(Token)match(input,INT,FOLLOW_INT_in_expr91); dbg.location(31,6);
 					v = Double.parseDouble( (INT1!=null?INT1.getText():null));dbg.location(32,5);
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:32:5: ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr )
 					int alt4=4;
@@ -478,8 +488,8 @@ public class GramaticaParser extends DebugParser {
 							// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:32:6: '+' e= expr
 							{
 							dbg.location(32,6);
-							match(input,10,FOLLOW_10_in_expr103); dbg.location(32,12);
-							pushFollow(FOLLOW_expr_in_expr109);
+							match(input,10,FOLLOW_10_in_expr101); dbg.location(32,12);
+							pushFollow(FOLLOW_expr_in_expr107);
 							e=expr();
 							state._fsp--;
 							dbg.location(32,19);
@@ -492,8 +502,8 @@ public class GramaticaParser extends DebugParser {
 							// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:33:7: '-' e= expr
 							{
 							dbg.location(33,7);
-							match(input,11,FOLLOW_11_in_expr120); dbg.location(33,13);
-							pushFollow(FOLLOW_expr_in_expr126);
+							match(input,11,FOLLOW_11_in_expr118); dbg.location(33,13);
+							pushFollow(FOLLOW_expr_in_expr124);
 							e=expr();
 							state._fsp--;
 							dbg.location(33,20);
@@ -506,8 +516,8 @@ public class GramaticaParser extends DebugParser {
 							// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:34:7: '*' e= expr
 							{
 							dbg.location(34,7);
-							match(input,9,FOLLOW_9_in_expr137); dbg.location(34,13);
-							pushFollow(FOLLOW_expr_in_expr143);
+							match(input,9,FOLLOW_9_in_expr135); dbg.location(34,13);
+							pushFollow(FOLLOW_expr_in_expr141);
 							e=expr();
 							state._fsp--;
 							dbg.location(34,20);
@@ -520,8 +530,8 @@ public class GramaticaParser extends DebugParser {
 							// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:35:7: '/' e= expr
 							{
 							dbg.location(35,7);
-							match(input,12,FOLLOW_12_in_expr154); dbg.location(35,13);
-							pushFollow(FOLLOW_expr_in_expr160);
+							match(input,12,FOLLOW_12_in_expr152); dbg.location(35,13);
+							pushFollow(FOLLOW_expr_in_expr158);
 							e=expr();
 							state._fsp--;
 							dbg.location(35,20);
@@ -540,7 +550,7 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:37:7: INT
 					{
 					dbg.location(37,7);
-					INT2=(Token)match(input,INT,FOLLOW_INT_in_expr172); dbg.location(37,11);
+					INT2=(Token)match(input,INT,FOLLOW_INT_in_expr170); dbg.location(37,11);
 					v = Double.parseDouble( (INT2!=null?INT2.getText():null));
 					}
 					break;
@@ -550,13 +560,13 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:39:7: '(' e= expr ')'
 					{
 					dbg.location(39,7);
-					match(input,7,FOLLOW_7_in_expr183); dbg.location(39,13);
-					pushFollow(FOLLOW_expr_in_expr189);
+					match(input,7,FOLLOW_7_in_expr181); dbg.location(39,13);
+					pushFollow(FOLLOW_expr_in_expr187);
 					e=expr();
 					state._fsp--;
 					dbg.location(39,20);
 					v = e;dbg.location(39,33);
-					match(input,8,FOLLOW_8_in_expr193); 
+					match(input,8,FOLLOW_8_in_expr191); 
 					}
 					break;
 
@@ -602,39 +612,39 @@ public class GramaticaParser extends DebugParser {
 			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:43:5: VAR ( '=' expr | '<>' expr | '<' expr | '>' expr | '<=' expr | '>=' expr )
 			{
 			dbg.location(43,5);
-			match(input,VAR,FOLLOW_VAR_in_rel214); dbg.location(44,5);
+			match(input,VAR,FOLLOW_VAR_in_rel212); dbg.location(44,5);
 			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:44:5: ( '=' expr | '<>' expr | '<' expr | '>' expr | '<=' expr | '>=' expr )
 			int alt6=6;
 			try { dbg.enterSubRule(6);
 			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
 
 			switch ( input.LA(1) ) {
-			case 17:
+			case 16:
 				{
 				alt6=1;
 				}
 				break;
-			case 16:
+			case 15:
 				{
 				alt6=2;
 				}
 				break;
-			case 14:
+			case 13:
 				{
 				alt6=3;
 				}
 				break;
-			case 18:
+			case 17:
 				{
 				alt6=4;
 				}
 				break;
-			case 15:
+			case 14:
 				{
 				alt6=5;
 				}
 				break;
-			case 19:
+			case 18:
 				{
 				alt6=6;
 				}
@@ -654,8 +664,8 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:44:7: '=' expr
 					{
 					dbg.location(44,7);
-					match(input,17,FOLLOW_17_in_rel223); dbg.location(44,12);
-					pushFollow(FOLLOW_expr_in_rel226);
+					match(input,16,FOLLOW_16_in_rel221); dbg.location(44,12);
+					pushFollow(FOLLOW_expr_in_rel224);
 					expr();
 					state._fsp--;
 					dbg.location(44,17);
@@ -668,8 +678,8 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:45:7: '<>' expr
 					{
 					dbg.location(45,7);
-					match(input,16,FOLLOW_16_in_rel237); dbg.location(45,12);
-					pushFollow(FOLLOW_expr_in_rel239);
+					match(input,15,FOLLOW_15_in_rel235); dbg.location(45,12);
+					pushFollow(FOLLOW_expr_in_rel237);
 					expr();
 					state._fsp--;
 					dbg.location(45,17);
@@ -682,8 +692,8 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:46:7: '<' expr
 					{
 					dbg.location(46,7);
-					match(input,14,FOLLOW_14_in_rel250); dbg.location(46,12);
-					pushFollow(FOLLOW_expr_in_rel253);
+					match(input,13,FOLLOW_13_in_rel248); dbg.location(46,12);
+					pushFollow(FOLLOW_expr_in_rel251);
 					expr();
 					state._fsp--;
 					dbg.location(46,17);
@@ -696,8 +706,8 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:47:7: '>' expr
 					{
 					dbg.location(47,7);
-					match(input,18,FOLLOW_18_in_rel264); dbg.location(47,12);
-					pushFollow(FOLLOW_expr_in_rel267);
+					match(input,17,FOLLOW_17_in_rel262); dbg.location(47,12);
+					pushFollow(FOLLOW_expr_in_rel265);
 					expr();
 					state._fsp--;
 					dbg.location(47,17);
@@ -710,8 +720,8 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:48:7: '<=' expr
 					{
 					dbg.location(48,7);
-					match(input,15,FOLLOW_15_in_rel277); dbg.location(48,12);
-					pushFollow(FOLLOW_expr_in_rel279);
+					match(input,14,FOLLOW_14_in_rel275); dbg.location(48,12);
+					pushFollow(FOLLOW_expr_in_rel277);
 					expr();
 					state._fsp--;
 					dbg.location(48,17);
@@ -724,8 +734,8 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:49:7: '>=' expr
 					{
 					dbg.location(49,7);
-					match(input,19,FOLLOW_19_in_rel289); dbg.location(49,12);
-					pushFollow(FOLLOW_expr_in_rel291);
+					match(input,18,FOLLOW_18_in_rel287); dbg.location(49,12);
+					pushFollow(FOLLOW_expr_in_rel289);
 					expr();
 					state._fsp--;
 					dbg.location(49,17);
@@ -763,40 +773,39 @@ public class GramaticaParser extends DebugParser {
 
 
 
-	public static final BitSet FOLLOW_stat_in_prog26 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_stat_in_prog26 = new BitSet(new long[]{0x0000000000100000L});
 	public static final BitSet FOLLOW_EOF_in_prog29 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_iteracao_in_stat41 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_21_in_iteracao52 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_rel_in_iteracao54 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_20_in_iteracao56 = new BitSet(new long[]{0x0000000000200090L});
-	public static final BitSet FOLLOW_comando_in_iteracao58 = new BitSet(new long[]{0x0000000000202090L});
-	public static final BitSet FOLLOW_13_in_iteracao61 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_iteracao_in_comando74 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_comando79 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr93 = new BitSet(new long[]{0x0000000000001E00L});
-	public static final BitSet FOLLOW_10_in_expr103 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr109 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_11_in_expr120 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr126 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_9_in_expr137 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr143 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_12_in_expr154 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr160 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr172 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_7_in_expr183 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_expr189 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_expr193 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VAR_in_rel214 = new BitSet(new long[]{0x00000000000FC000L});
-	public static final BitSet FOLLOW_17_in_rel223 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel226 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_16_in_rel237 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel239 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_14_in_rel250 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel253 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_18_in_rel264 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel267 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_15_in_rel277 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel279 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_19_in_rel289 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel291 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_20_in_iteracao52 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_rel_in_iteracao54 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_19_in_iteracao56 = new BitSet(new long[]{0x0000000000100090L});
+	public static final BitSet FOLLOW_comando_in_iteracao58 = new BitSet(new long[]{0x0000000000100092L});
+	public static final BitSet FOLLOW_iteracao_in_comando72 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_comando77 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr91 = new BitSet(new long[]{0x0000000000001E00L});
+	public static final BitSet FOLLOW_10_in_expr101 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr107 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_11_in_expr118 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr124 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_9_in_expr135 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr141 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_expr152 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr158 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr170 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_7_in_expr181 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_expr187 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_expr191 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_VAR_in_rel212 = new BitSet(new long[]{0x000000000007E000L});
+	public static final BitSet FOLLOW_16_in_rel221 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel224 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_15_in_rel235 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel237 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_13_in_rel248 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel251 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_17_in_rel262 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel265 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_14_in_rel275 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel277 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_rel287 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel289 = new BitSet(new long[]{0x0000000000000002L});
 }

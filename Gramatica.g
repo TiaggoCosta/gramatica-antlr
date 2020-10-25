@@ -18,7 +18,7 @@ stat:
 	; 
 
 iteracao:
-	'while' rel 'do' comando+ ';'
+	'while' rel 'do' comando+
 	;
 
 comando: 
