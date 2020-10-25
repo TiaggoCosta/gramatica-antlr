@@ -14,25 +14,27 @@ prog:
    ;
 
 stat:
-	iteracao
+	comando
 	; 
+
+comando: 
+	//| teste
+    //| atribuicao
+	iteracao
+	|  expr 
+	;
 
 iteracao:
 	'while' rel 'do' comando+
 	;
 
-comando: 
-	//| teste
-	iteracao
-	| expr
-	;
-
 expr returns [ double v ]:
 	INT {$v = Double.parseDouble( $INT.text);} 
-    ('+' e = expr {$v += $e.v;} 
-    | '-' e = expr {$v -= $e.v;} 
-    | '*' e = expr {$v *= $e.v;} 
-    | '/' e = expr {$v /= $e.v;})
+    ('+' e = expr {$v += $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
+    | '-' e = expr {$v -= $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
+    | '*' e = expr {$v *= $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
+    | '/' e = expr {$v /= $e.v;} {System.out.println("Resultado: " + $e.v);} // só para teste 
+    )
 
     |	INT {$v = Double.parseDouble( $INT.text);}
 
