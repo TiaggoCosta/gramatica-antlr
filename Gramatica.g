@@ -21,7 +21,8 @@ comando:
 	//| teste
     //| atribuicao
 	iteracao
-	| (e = expr {System.out.println("Resultado: " + $e.v);})+ // só para teste 
+	//| (e = expr {System.out.println("Resultado: " + $e.v);})+ // só para teste 
+    | rel // só para teste 
 	;
 
 iteracao:
@@ -40,13 +41,14 @@ expr returns [ double v ]:
     ;
 
 rel returns [ boolean v ]: 
-    VAR 
-    ( '='  expr {System.out.println("Lido '='");} 
-    | '<>' expr {System.out.println("Lido '<>'");} 
-    | '<'  expr {System.out.println("Lido '<'");} 
-    | '>'  expr {System.out.println("Lido '>'");}
-    | '<=' expr {System.out.println("Lido '<='");}
-    | '>=' expr {System.out.println("Lido '>='");})
+    (VAR | e = expr {System.out.println("Resultado: " + $e.v);}) 
+    ( '='  e = expr {System.out.println("Lido '='");}  {System.out.println("Resultado: " + $e.v);}
+    | '<>' e = expr {System.out.println("Lido '<>'");} {System.out.println("Resultado: " + $e.v);}
+    | '<'  e = expr {System.out.println("Lido '<'");}  {System.out.println("Resultado: " + $e.v);}
+    | '>'  e = expr {System.out.println("Lido '>'");}  {System.out.println("Resultado: " + $e.v);}
+    | '<=' e = expr {System.out.println("Lido '<='");} {System.out.println("Resultado: " + $e.v);}
+    | '>=' e = expr {System.out.println("Lido '>='");} {System.out.println("Resultado: " + $e.v);}
+    )
     ;
 
 INT : ('0'..'9')+ ;
