@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 while 10/2 >= 3+2 do aux;
+=======
+if a > 1 then
+a := 6;
+if c > 9 then
+c := 3;
+else
+b := 5;
+>>>>>>> 309f8f37f577629b48c59d410af8510986d325eb
