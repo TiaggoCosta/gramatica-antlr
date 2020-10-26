@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-10-25 20:05:06
+// $ANTLR 3.5.1 C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-10-25 22:06:18
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -42,12 +42,12 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "stat", "rel", "iteracao", "prog", "expr", "comando"
+		"invalidRule", "prog", "comando", "iteracao", "rel", "stat", "expr"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
 		false, // invalid decision
-		false, false, false, false, false, false, false
+		false, false, false, false, false, false
 	};
 
  
@@ -318,9 +318,9 @@ public class GramaticaParser extends DebugParser {
 			e=rel();
 			state._fsp--;
 			dbg.location(31,18);
-			System.out.println("Resultado: " + e);dbg.location(31,62);
-			match(input,19,FOLLOW_19_in_iteracao106); dbg.location(31,67);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:31:67: ( comando )+
+			System.out.println("Resultado relacional: " + e);dbg.location(31,73);
+			match(input,19,FOLLOW_19_in_iteracao106); dbg.location(31,78);
+			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:31:78: ( comando )+
 			int cnt3=0;
 			try { dbg.enterSubRule(3);
 
@@ -352,9 +352,9 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:31:67: comando
+					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:31:78: comando
 					{
-					dbg.location(31,67);
+					dbg.location(31,78);
 					pushFollow(FOLLOW_comando_in_iteracao108);
 					comando();
 					state._fsp--;
@@ -599,11 +599,12 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "rel"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:45:1: rel returns [ boolean v ] : ( VAR |e= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) ;
+	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:45:1: rel returns [ boolean t ] : (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) ;
 	public final boolean rel() throws RecognitionException {
-		boolean v = false;
+		boolean t = false;
 
 
+		double d =0.0;
 		double e =0.0;
 
 		try { dbg.enterRule(getGrammarFileName(), "rel");
@@ -612,119 +613,84 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(45, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:45:26: ( ( VAR |e= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) )
+			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:45:26: ( (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:5: ( VAR |e= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
+			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:5: (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
 			{
 			dbg.location(46,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:5: ( VAR |e= expr )
-			int alt6=2;
+			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:5: (d= expr )
+			dbg.enterAlt(1);
+
+			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:7: d= expr
+			{
+			dbg.location(46,9);
+			pushFollow(FOLLOW_expr_in_rel250);
+			d=expr();
+			state._fsp--;
+			dbg.location(46,16);
+			System.out.println("Resultado: " + d);
+			}
+			dbg.location(47,5);
+			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:5: ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
+			int alt6=6;
 			try { dbg.enterSubRule(6);
 			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
 
-			int LA6_0 = input.LA(1);
-			if ( (LA6_0==VAR) ) {
+			switch ( input.LA(1) ) {
+			case 16:
+				{
 				alt6=1;
-			}
-			else if ( (LA6_0==INT||LA6_0==7) ) {
+				}
+				break;
+			case 15:
+				{
 				alt6=2;
-			}
-
-			else {
+				}
+				break;
+			case 13:
+				{
+				alt6=3;
+				}
+				break;
+			case 17:
+				{
+				alt6=4;
+				}
+				break;
+			case 14:
+				{
+				alt6=5;
+				}
+				break;
+			case 18:
+				{
+				alt6=6;
+				}
+				break;
+			default:
 				NoViableAltException nvae =
 					new NoViableAltException("", 6, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-
 			} finally {dbg.exitDecision(6);}
 
 			switch (alt6) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:6: VAR
-					{
-					dbg.location(46,6);
-					match(input,VAR,FOLLOW_VAR_in_rel245); 
-					}
-					break;
-				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:12: e= expr
-					{
-					dbg.location(46,14);
-					pushFollow(FOLLOW_expr_in_rel253);
-					e=expr();
-					state._fsp--;
-					dbg.location(46,21);
-					System.out.println("Resultado: " + e);
-					}
-					break;
-
-			}
-			} finally {dbg.exitSubRule(6);}
-			dbg.location(47,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:5: ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
-			int alt7=6;
-			try { dbg.enterSubRule(7);
-			try { dbg.enterDecision(7, decisionCanBacktrack[7]);
-
-			switch ( input.LA(1) ) {
-			case 16:
-				{
-				alt7=1;
-				}
-				break;
-			case 15:
-				{
-				alt7=2;
-				}
-				break;
-			case 13:
-				{
-				alt7=3;
-				}
-				break;
-			case 17:
-				{
-				alt7=4;
-				}
-				break;
-			case 14:
-				{
-				alt7=5;
-				}
-				break;
-			case 18:
-				{
-				alt7=6;
-				}
-				break;
-			default:
-				NoViableAltException nvae =
-					new NoViableAltException("", 7, 0, input);
-				dbg.recognitionException(nvae);
-				throw nvae;
-			}
-			} finally {dbg.exitDecision(7);}
-
-			switch (alt7) {
-				case 1 :
-					dbg.enterAlt(1);
-
 					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:47:7: '=' e= expr
 					{
 					dbg.location(47,7);
-					match(input,16,FOLLOW_16_in_rel265); dbg.location(47,14);
-					pushFollow(FOLLOW_expr_in_rel272);
+					match(input,16,FOLLOW_16_in_rel262); dbg.location(47,14);
+					pushFollow(FOLLOW_expr_in_rel269);
 					e=expr();
 					state._fsp--;
 					dbg.location(47,21);
 					System.out.println("Lido '='");dbg.location(47,56);
-					System.out.println("Resultado: " + e);
+					System.out.println("Resultado: " + e);dbg.location(47,100);
+					t = d == e;
 					}
 					break;
 				case 2 :
@@ -733,13 +699,14 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:7: '<>' e= expr
 					{
 					dbg.location(48,7);
-					match(input,15,FOLLOW_15_in_rel285); dbg.location(48,14);
-					pushFollow(FOLLOW_expr_in_rel291);
+					match(input,15,FOLLOW_15_in_rel284); dbg.location(48,14);
+					pushFollow(FOLLOW_expr_in_rel290);
 					e=expr();
 					state._fsp--;
 					dbg.location(48,21);
 					System.out.println("Lido '<>'");dbg.location(48,56);
-					System.out.println("Resultado: " + e);
+					System.out.println("Resultado: " + e);dbg.location(48,100);
+					t = d != e;
 					}
 					break;
 				case 3 :
@@ -748,13 +715,14 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:49:7: '<' e= expr
 					{
 					dbg.location(49,7);
-					match(input,13,FOLLOW_13_in_rel303); dbg.location(49,14);
-					pushFollow(FOLLOW_expr_in_rel310);
+					match(input,13,FOLLOW_13_in_rel304); dbg.location(49,14);
+					pushFollow(FOLLOW_expr_in_rel311);
 					e=expr();
 					state._fsp--;
 					dbg.location(49,21);
 					System.out.println("Lido '<'");dbg.location(49,56);
-					System.out.println("Resultado: " + e);
+					System.out.println("Resultado: " + e);dbg.location(49,100);
+					t = d <  e;
 					}
 					break;
 				case 4 :
@@ -763,13 +731,14 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:50:7: '>' e= expr
 					{
 					dbg.location(50,7);
-					match(input,17,FOLLOW_17_in_rel323); dbg.location(50,14);
-					pushFollow(FOLLOW_expr_in_rel330);
+					match(input,17,FOLLOW_17_in_rel326); dbg.location(50,14);
+					pushFollow(FOLLOW_expr_in_rel333);
 					e=expr();
 					state._fsp--;
 					dbg.location(50,21);
 					System.out.println("Lido '>'");dbg.location(50,56);
-					System.out.println("Resultado: " + e);
+					System.out.println("Resultado: " + e);dbg.location(50,100);
+					t = d >  e;
 					}
 					break;
 				case 5 :
@@ -778,13 +747,14 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:51:7: '<=' e= expr
 					{
 					dbg.location(51,7);
-					match(input,14,FOLLOW_14_in_rel343); dbg.location(51,14);
-					pushFollow(FOLLOW_expr_in_rel349);
+					match(input,14,FOLLOW_14_in_rel348); dbg.location(51,14);
+					pushFollow(FOLLOW_expr_in_rel354);
 					e=expr();
 					state._fsp--;
 					dbg.location(51,21);
 					System.out.println("Lido '<='");dbg.location(51,56);
-					System.out.println("Resultado: " + e);
+					System.out.println("Resultado: " + e);dbg.location(51,100);
+					t = d <= e;
 					}
 					break;
 				case 6 :
@@ -793,18 +763,19 @@ public class GramaticaParser extends DebugParser {
 					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:52:7: '>=' e= expr
 					{
 					dbg.location(52,7);
-					match(input,18,FOLLOW_18_in_rel361); dbg.location(52,14);
-					pushFollow(FOLLOW_expr_in_rel367);
+					match(input,18,FOLLOW_18_in_rel368); dbg.location(52,14);
+					pushFollow(FOLLOW_expr_in_rel374);
 					e=expr();
 					state._fsp--;
 					dbg.location(52,21);
 					System.out.println("Lido '>='");dbg.location(52,56);
-					System.out.println("Resultado: " + e);
+					System.out.println("Resultado: " + e);dbg.location(52,100);
+					t = d >= e;
 					}
 					break;
 
 			}
-			} finally {dbg.exitSubRule(7);}
+			} finally {dbg.exitSubRule(6);}
 
 			}
 
@@ -825,7 +796,7 @@ public class GramaticaParser extends DebugParser {
 			if ( getRuleLevel()==0 ) {dbg.terminate();}
 		}
 
-		return v;
+		return t;
 	}
 	// $ANTLR end "rel"
 
@@ -839,7 +810,7 @@ public class GramaticaParser extends DebugParser {
 	public static final BitSet FOLLOW_iteracao_in_comando56 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_VAR_in_comando71 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_INT_in_comando79 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_iteracao96 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_20_in_iteracao96 = new BitSet(new long[]{0x0000000000000090L});
 	public static final BitSet FOLLOW_rel_in_iteracao102 = new BitSet(new long[]{0x0000000000080000L});
 	public static final BitSet FOLLOW_19_in_iteracao106 = new BitSet(new long[]{0x0000000000100030L});
 	public static final BitSet FOLLOW_comando_in_iteracao108 = new BitSet(new long[]{0x0000000000100032L});
@@ -855,18 +826,17 @@ public class GramaticaParser extends DebugParser {
 	public static final BitSet FOLLOW_7_in_expr213 = new BitSet(new long[]{0x0000000000000090L});
 	public static final BitSet FOLLOW_expr_in_expr219 = new BitSet(new long[]{0x0000000000000100L});
 	public static final BitSet FOLLOW_8_in_expr223 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VAR_in_rel245 = new BitSet(new long[]{0x000000000007E000L});
-	public static final BitSet FOLLOW_expr_in_rel253 = new BitSet(new long[]{0x000000000007E000L});
-	public static final BitSet FOLLOW_16_in_rel265 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel272 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_15_in_rel285 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel291 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_13_in_rel303 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel310 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_17_in_rel323 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel330 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_14_in_rel343 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel349 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_18_in_rel361 = new BitSet(new long[]{0x0000000000000090L});
-	public static final BitSet FOLLOW_expr_in_rel367 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_rel250 = new BitSet(new long[]{0x000000000007E000L});
+	public static final BitSet FOLLOW_16_in_rel262 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel269 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_15_in_rel284 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel290 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_13_in_rel304 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel311 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_17_in_rel326 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel333 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_14_in_rel348 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel354 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_rel368 = new BitSet(new long[]{0x0000000000000090L});
+	public static final BitSet FOLLOW_expr_in_rel374 = new BitSet(new long[]{0x0000000000000002L});
 }

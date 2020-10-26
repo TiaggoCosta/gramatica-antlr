@@ -28,7 +28,7 @@ comando:
 	;
 
 iteracao:
-	'while' e = rel {System.out.println("Resultado: " + $e.v);} 'do' comando+
+	'while' e = rel {System.out.println("Resultado relacional: " + $e.t);} 'do' comando+
 	;
 
 expr returns [ double v ]:
@@ -42,14 +42,14 @@ expr returns [ double v ]:
     |	'(' e = expr {$v = $e.v;} ')'
     ;
 
-rel returns [ boolean v ]: 
-    (VAR | e = expr {System.out.println("Resultado: " + $e.v);}) 
-    ( '='  e = expr {System.out.println("Lido '='");}  {System.out.println("Resultado: " + $e.v);} 
-    | '<>' e = expr {System.out.println("Lido '<>'");} {System.out.println("Resultado: " + $e.v);} {}
-    | '<'  e = expr {System.out.println("Lido '<'");}  {System.out.println("Resultado: " + $e.v);}
-    | '>'  e = expr {System.out.println("Lido '>'");}  {System.out.println("Resultado: " + $e.v);}
-    | '<=' e = expr {System.out.println("Lido '<='");} {System.out.println("Resultado: " + $e.v);}
-    | '>=' e = expr {System.out.println("Lido '>='");} {System.out.println("Resultado: " + $e.v);}
+rel returns [ boolean t ]: 
+    ( d = expr {System.out.println("Resultado: " + $d.v);}) 
+    ( '='  e = expr {System.out.println("Lido '='");}  {System.out.println("Resultado: " + $e.v);} {$t = $d.v == $e.v;}
+    | '<>' e = expr {System.out.println("Lido '<>'");} {System.out.println("Resultado: " + $e.v);} {$t = $d.v != $e.v;}
+    | '<'  e = expr {System.out.println("Lido '<'");}  {System.out.println("Resultado: " + $e.v);} {$t = $d.v <  $e.v;}
+    | '>'  e = expr {System.out.println("Lido '>'");}  {System.out.println("Resultado: " + $e.v);} {$t = $d.v >  $e.v;}
+    | '<=' e = expr {System.out.println("Lido '<='");} {System.out.println("Resultado: " + $e.v);} {$t = $d.v <= $e.v;}
+    | '>=' e = expr {System.out.println("Lido '>='");} {System.out.println("Resultado: " + $e.v);} {$t = $d.v >= $e.v;}
     )
     ;
 
