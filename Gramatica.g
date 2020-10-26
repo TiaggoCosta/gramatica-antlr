@@ -18,11 +18,10 @@ stat:
 	; 
 
 comando: 
-    iteracao
-	//| teste
-    //| atribuicao
-    | VAR
-    | INT
+    	iteracao
+	| teste
+    	| VAR
+	| INT
 	//| (e = expr {System.out.println("Resultado: " + $e.v);})+ // só para teste 
     //| rel // só para teste 
 	;
@@ -31,8 +30,17 @@ iteracao:
 	'while' e = rel {System.out.println("Resultado: " + $e.v);} 'do' comando+
 	;
 
+teste:
+	('if' rel 'then' comando+) teste2 
+	;
+	
+teste2:	
+	('else' comando+)
+	| 
+	;
+
 expr returns [ double v ]:
-	INT {$v = Double.parseDouble( $INT.text);} 
+    INT {$v = Double.parseDouble( $INT.text);} 
     ('+' e = expr {$v += $e.v;} 
     | '-' e = expr {$v -= $e.v;} 
     | '*' e = expr {$v *= $e.v;} 
