@@ -26,7 +26,7 @@ comando
 	| teste
 
     //| VAR // só para teste
-	//| INT // só para teste
+	| INT // só para teste
 	//| (e = expr {System.out.println("Resultado: " + $e.v);})+ // só para teste 
     //| rel // só para teste 
 	;
@@ -44,7 +44,7 @@ teste
 teste2
     :	
 	('else' comandos)
-	| 
+	|
 	;
 
 expr returns [ double v ]
