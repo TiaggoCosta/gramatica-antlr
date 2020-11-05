@@ -14,7 +14,7 @@ options {
 
 prog
     :
-    stat* EOF
+    stat+ EOF
     ;
 
 stat
@@ -41,7 +41,7 @@ iteracao
 
 atribuicao
     :
-    VAR '=' expr 
+    VAR ':=' expr 
     {memory.put($VAR.text, new Double($expr.v));} 
     {System.out.println("Variavel " + $VAR.text + " = " + $expr.v);}
     {System.out.println("memory: " + $VAR.text + " = " + memory.get($VAR.text));}
