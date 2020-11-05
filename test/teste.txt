@@ -3,15 +3,15 @@ while 1=1
 
     if 3>1 
       then 
-        4; 
-        2; 
+        aux := 4; 
+        a := 2; 
       else 
-        5;
+        b := 5;
     ;
 
     if 2<= 4
       then
-         1;
+        c := 1;
     ;
 
 ;
