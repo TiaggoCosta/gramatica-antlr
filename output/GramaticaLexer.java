@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-11-04 01:34:54
+// $ANTLR 3.5.1 C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-11-05 19:44:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -376,10 +376,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:74:5: ( ( '0' .. '9' )+ )
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:74:7: ( '0' .. '9' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:85:5: ( ( '0' .. '9' )+ )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:85:7: ( '0' .. '9' )+
 			{
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:74:7: ( '0' .. '9' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:85:7: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -428,10 +428,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:75:5: ( ( 'a' .. 'z' )+ )
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:75:7: ( 'a' .. 'z' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:86:5: ( ( 'a' .. 'z' )+ )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:86:7: ( 'a' .. 'z' )+
 			{
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:75:7: ( 'a' .. 'z' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:86:7: ( 'a' .. 'z' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -480,10 +480,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:77:5: ( ( ' ' | '\\n' | '\\r' )+ )
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:77:7: ( ' ' | '\\n' | '\\r' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:88:5: ( ( ' ' | '\\n' | '\\r' )+ )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:88:7: ( ' ' | '\\n' | '\\r' )+
 			{
-			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:77:7: ( ' ' | '\\n' | '\\r' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:88:7: ( ' ' | '\\n' | '\\r' )+
 			int cnt3=0;
 			loop3:
 			while (true) {

@@ -4,6 +4,14 @@ options {
 	language=Java;
 }
 
+@header {
+    import java.util.HashMap;
+}
+
+@members {
+    HashMap memory = new HashMap();
+}
+
 prog
     :
     stat* EOF
@@ -21,24 +29,27 @@ comandos
 
 comando
     : 
-    iteracao
-    //| atribuicao
-	| teste
-
-    //| VAR // só para teste
-	| INT // só para teste
-	//| (e = expr {System.out.println("Resultado: " + $e.v);})+ // só para teste 
-    //| rel // só para teste 
+    atribuicao
+    | iteracao
+	| teste 
 	;
 
 iteracao
     :
-	'while' e = rel {System.out.println("Resultado relacional: " + $e.t);} 'do' comandos 
+	'while' rel {System.out.println("Resultado relacional: " + $rel.t);} 'do' comandos 
 	;
+
+atribuicao
+    :
+    VAR '=' expr 
+    {memory.put($VAR.text, new Double($expr.v));} 
+    {System.out.println("Variavel " + $VAR.text + " = " + $expr.v);}
+    {System.out.println("memory: " + $VAR.text + " = " + memory.get($VAR.text));}
+    ;
 
 teste
     :
-	('if' rel 'then' comandos) teste2 
+	('if' rel {System.out.println("Resultado relacional: " + $rel.t);} 'then' comandos) teste2 
 	;
 	
 teste2
@@ -50,7 +61,7 @@ teste2
 expr returns [ double v ]
     :
     INT {$v = Double.parseDouble( $INT.text);} 
-    ('+' e = expr {$v += $e.v;} 
+    ( '+' e = expr {$v += $e.v;} 
     | '-' e = expr {$v -= $e.v;} 
     | '*' e = expr {$v *= $e.v;} 
     | '/' e = expr {$v /= $e.v;} 
