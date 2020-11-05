@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-10-29 18:24:43
+// $ANTLR 3.5.1 C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g 2020-11-04 01:34:54
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -44,8 +44,8 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "prog", "comandos", "teste", "iteracao", "expr", "rel", 
-		"teste2", "stat", "comando"
+		"invalidRule", "comandos", "expr", "prog", "comando", "teste", "stat", 
+		"iteracao", "teste2", "rel"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -85,12 +85,12 @@ public class GramaticaParser extends DebugParser {
 	}
 
 	@Override public String[] getTokenNames() { return GramaticaParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g"; }
 
 
 
 	// $ANTLR start "prog"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:7:1: prog : ( stat )* EOF ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:7:1: prog : ( stat )* EOF ;
 	public final void prog() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "prog");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -98,13 +98,13 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(7, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:8:5: ( ( stat )* EOF )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:8:5: ( ( stat )* EOF )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:5: ( stat )* EOF
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:5: ( stat )* EOF
 			{
 			dbg.location(9,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:5: ( stat )*
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:5: ( stat )*
 			try { dbg.enterSubRule(1);
 
 			loop1:
@@ -123,7 +123,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:5: stat
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:9:5: stat
 					{
 					dbg.location(9,5);
 					pushFollow(FOLLOW_stat_in_prog29);
@@ -165,7 +165,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "stat"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:12:1: stat : comandos ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:12:1: stat : comandos ;
 	public final void stat() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "stat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -173,10 +173,10 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(12, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:13:5: ( comandos )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:13:5: ( comandos )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:14:2: comandos
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:14:2: comandos
 			{
 			dbg.location(14,2);
 			pushFollow(FOLLOW_comandos_in_stat50);
@@ -208,7 +208,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "comandos"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:17:1: comandos : ( comando ';' )+ ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:17:1: comandos : ( comando ';' )+ ;
 	public final void comandos() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "comandos");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -216,13 +216,13 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(17, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:18:5: ( ( comando ';' )+ )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:18:5: ( ( comando ';' )+ )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:19:5: ( comando ';' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:19:5: ( comando ';' )+
 			{
 			dbg.location(19,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:19:5: ( comando ';' )+
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:19:5: ( comando ';' )+
 			int cnt2=0;
 			try { dbg.enterSubRule(2);
 
@@ -254,7 +254,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:19:6: comando ';'
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:19:6: comando ';'
 					{
 					dbg.location(19,6);
 					pushFollow(FOLLOW_comando_in_comandos70);
@@ -301,7 +301,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "comando"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:22:1: comando : ( iteracao | teste | INT );
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:22:1: comando : ( iteracao | teste | INT );
 	public final void comando() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "comando");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -309,7 +309,7 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(22, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:23:5: ( iteracao | teste | INT )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:23:5: ( iteracao | teste | INT )
 			int alt3=3;
 			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
@@ -341,7 +341,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:24:5: iteracao
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:24:5: iteracao
 					{
 					dbg.location(24,5);
 					pushFollow(FOLLOW_iteracao_in_comando96);
@@ -353,7 +353,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:26:4: teste
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:26:4: teste
 					{
 					dbg.location(26,4);
 					pushFollow(FOLLOW_teste_in_comando106);
@@ -365,7 +365,7 @@ public class GramaticaParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:29:4: INT
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:29:4: INT
 					{
 					dbg.location(29,4);
 					match(input,INT,FOLLOW_INT_in_comando117); 
@@ -396,7 +396,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "iteracao"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:34:1: iteracao : 'while' e= rel 'do' comandos ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:34:1: iteracao : 'while' e= rel 'do' comandos ;
 	public final void iteracao() throws RecognitionException {
 		boolean e =false;
 
@@ -406,10 +406,10 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(34, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:35:5: ( 'while' e= rel 'do' comandos )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:35:5: ( 'while' e= rel 'do' comandos )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:36:2: 'while' e= rel 'do' comandos
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:36:2: 'while' e= rel 'do' comandos
 			{
 			dbg.location(36,2);
 			match(input,22,FOLLOW_22_in_iteracao140); dbg.location(36,12);
@@ -448,7 +448,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "teste"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:39:1: teste : ( 'if' rel 'then' comandos ) teste2 ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:39:1: teste : ( 'if' rel 'then' comandos ) teste2 ;
 	public final void teste() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -456,16 +456,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(39, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:40:5: ( ( 'if' rel 'then' comandos ) teste2 )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:40:5: ( ( 'if' rel 'then' comandos ) teste2 )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:41:2: ( 'if' rel 'then' comandos ) teste2
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:41:2: ( 'if' rel 'then' comandos ) teste2
 			{
 			dbg.location(41,2);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:41:2: ( 'if' rel 'then' comandos )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:41:2: ( 'if' rel 'then' comandos )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:41:3: 'if' rel 'then' comandos
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:41:3: 'if' rel 'then' comandos
 			{
 			dbg.location(41,3);
 			match(input,20,FOLLOW_20_in_teste169); dbg.location(41,8);
@@ -509,7 +509,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "teste2"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:44:1: teste2 : ( ( 'else' comandos ) |);
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:44:1: teste2 : ( ( 'else' comandos ) |);
 	public final void teste2() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste2");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -517,7 +517,7 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(44, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:45:5: ( ( 'else' comandos ) |)
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:45:5: ( ( 'else' comandos ) |)
 			int alt4=2;
 			try { dbg.enterDecision(4, decisionCanBacktrack[4]);
 
@@ -542,13 +542,13 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:2: ( 'else' comandos )
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:2: ( 'else' comandos )
 					{
 					dbg.location(46,2);
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:2: ( 'else' comandos )
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:2: ( 'else' comandos )
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:3: 'else' comandos
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:46:3: 'else' comandos
 					{
 					dbg.location(46,3);
 					match(input,19,FOLLOW_19_in_teste2197); dbg.location(46,10);
@@ -563,7 +563,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:2: 
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:48:2: 
 					{
 					}
 					break;
@@ -592,7 +592,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "expr"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:50:1: expr returns [ double v ] : INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |) ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:50:1: expr returns [ double v ] : INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |) ;
 	public final double expr() throws RecognitionException {
 		double v = 0.0;
 
@@ -606,15 +606,15 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(50, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:51:5: ( INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |) )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:51:5: ( INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:52:5: INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:52:5: INT ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
 			{
 			dbg.location(52,5);
 			INT1=(Token)match(input,INT,FOLLOW_INT_in_expr225); dbg.location(52,9);
 			v = Double.parseDouble( (INT1!=null?INT1.getText():null));dbg.location(53,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:5: ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:5: ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
 			int alt5=5;
 			try { dbg.enterSubRule(5);
 			try { dbg.enterDecision(5, decisionCanBacktrack[5]);
@@ -664,7 +664,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:6: '+' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:53:6: '+' e= expr
 					{
 					dbg.location(53,6);
 					match(input,8,FOLLOW_8_in_expr235); dbg.location(53,12);
@@ -678,7 +678,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:54:7: '-' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:54:7: '-' e= expr
 					{
 					dbg.location(54,7);
 					match(input,9,FOLLOW_9_in_expr252); dbg.location(54,13);
@@ -692,7 +692,7 @@ public class GramaticaParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:55:7: '*' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:55:7: '*' e= expr
 					{
 					dbg.location(55,7);
 					match(input,7,FOLLOW_7_in_expr269); dbg.location(55,13);
@@ -706,7 +706,7 @@ public class GramaticaParser extends DebugParser {
 				case 4 :
 					dbg.enterAlt(4);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:56:7: '/' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:56:7: '/' e= expr
 					{
 					dbg.location(56,7);
 					match(input,10,FOLLOW_10_in_expr286); dbg.location(56,13);
@@ -720,7 +720,7 @@ public class GramaticaParser extends DebugParser {
 				case 5 :
 					dbg.enterAlt(5);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:58:5: 
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:58:5: 
 					{
 					}
 					break;
@@ -754,7 +754,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "rel"
-	// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:62:1: rel returns [ boolean t ] : (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) ;
+	// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:62:1: rel returns [ boolean t ] : (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) ;
 	public final boolean rel() throws RecognitionException {
 		boolean t = false;
 
@@ -768,16 +768,16 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(62, 0);
 
 		try {
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:63:5: ( (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:63:5: ( (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:64:5: (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:64:5: (d= expr ) ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
 			{
 			dbg.location(64,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:64:5: (d= expr )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:64:5: (d= expr )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:64:7: d= expr
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:64:7: d= expr
 			{
 			dbg.location(64,9);
 			pushFollow(FOLLOW_expr_in_rel344);
@@ -787,7 +787,7 @@ public class GramaticaParser extends DebugParser {
 			System.out.println("Resultado: " + d);
 			}
 			dbg.location(65,5);
-			// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:5: ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
+			// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:5: ( '=' e= expr | '<>' e= expr | '<' e= expr | '>' e= expr | '<=' e= expr | '>=' e= expr )
 			int alt6=6;
 			try { dbg.enterSubRule(6);
 			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
@@ -835,7 +835,7 @@ public class GramaticaParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:7: '=' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:65:7: '=' e= expr
 					{
 					dbg.location(65,7);
 					match(input,15,FOLLOW_15_in_rel356); dbg.location(65,14);
@@ -851,7 +851,7 @@ public class GramaticaParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:66:7: '<>' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:66:7: '<>' e= expr
 					{
 					dbg.location(66,7);
 					match(input,14,FOLLOW_14_in_rel378); dbg.location(66,14);
@@ -867,7 +867,7 @@ public class GramaticaParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:67:7: '<' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:67:7: '<' e= expr
 					{
 					dbg.location(67,7);
 					match(input,12,FOLLOW_12_in_rel398); dbg.location(67,14);
@@ -883,7 +883,7 @@ public class GramaticaParser extends DebugParser {
 				case 4 :
 					dbg.enterAlt(4);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:7: '>' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:68:7: '>' e= expr
 					{
 					dbg.location(68,7);
 					match(input,16,FOLLOW_16_in_rel420); dbg.location(68,14);
@@ -899,7 +899,7 @@ public class GramaticaParser extends DebugParser {
 				case 5 :
 					dbg.enterAlt(5);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:69:7: '<=' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:69:7: '<=' e= expr
 					{
 					dbg.location(69,7);
 					match(input,13,FOLLOW_13_in_rel442); dbg.location(69,14);
@@ -915,7 +915,7 @@ public class GramaticaParser extends DebugParser {
 				case 6 :
 					dbg.enterAlt(6);
 
-					// C:\\Users\\Tiago\\OneDrive\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:70:7: '>=' e= expr
+					// C:\\Users\\jenif\\Documents\\vscode\\java\\gramatica-antlr\\Gramatica.g:70:7: '>=' e= expr
 					{
 					dbg.location(70,7);
 					match(input,17,FOLLOW_17_in_rel462); dbg.location(70,14);
