@@ -9,7 +9,7 @@ options {
 }
 
 @members {
-    HashMap memory = new HashMap();
+    HashMap<String, Double> memory = new HashMap<>();
 }
 
 prog
@@ -36,22 +36,19 @@ comando
 
 iteracao
     :
-	'while' rel  'do' comandos 
-    { System.out.println("Resultado relacional: " + $rel.t); }
+	'while' rel 'do' comandos
 	;
 
 atribuicao
     :
     VAR ':=' expr 
     { memory.put($VAR.text, new Double($expr.v)); } 
-    { System.out.println("Variavel " + $VAR.text + " = " + $expr.v); }
-    { System.out.println("memory: " + $VAR.text + " = " + memory.get($VAR.text)); }
+    { System.out.println("Variavel " + $VAR.text + " : " + $expr.v); }
     ;
 
 teste
     :
 	('if' rel 'then' comandos) teste2 
-    { System.out.println("Resultado relacional: " + $rel.t); }
 	;
 	
 teste2
@@ -62,11 +59,12 @@ teste2
 
 expr returns [ double v ]
     :
-    INT { $v = Double.parseDouble($INT.text); } 
-    ( '+' e = expr {$v += $e.v;} 
-    | '-' e = expr {$v -= $e.v;} 
-    | '*' e = expr {$v *= $e.v;} 
-    | '/' e = expr {$v /= $e.v;} 
+    ( INT { $v = Double.parseDouble($INT.text); } {System.out.println("lido: " + $v);}
+    | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("lido: " + $v);} )
+    ( '+' {System.out.println("lido: + ");} e = expr {$v += $e.v;} {System.out.println("Resultado da soma: " + $v);}
+    | '-' {System.out.println("lido: - ");} e = expr {$v -= $e.v;} {System.out.println("Resultado da subtracao: " + $v);}
+    | '*' {System.out.println("lido: * ");} e = expr {$v *= $e.v;} {System.out.println("Resultado da multiplicacao: " + $v);}
+    | '/' {System.out.println("lido: / ");} e = expr {$v /= $e.v;} {System.out.println("Resultado da divisao: " + $v);}
     |
     )
     | '(' e = expr {$v = $e.v;} ')'
@@ -74,16 +72,16 @@ expr returns [ double v ]
 
 rel returns [ boolean t ]
     : 
-    ( e = expr {System.out.println("Resultado: " + $e.v);}) 
-    ( '='  d = expr {System.out.println("Lido '='" );} {System.out.println("Resultado: " + $d.v);} {$t = $e.v == $d.v;}
-    | '<>' d = expr {System.out.println("Lido '<>'");} {System.out.println("Resultado: " + $d.v);} {$t = $e.v != $d.v;}
-    | '<'  d = expr {System.out.println("Lido '<'" );} {System.out.println("Resultado: " + $d.v);} {$t = $e.v <  $d.v;}
-    | '>'  d = expr {System.out.println("Lido '>'" );} {System.out.println("Resultado: " + $d.v);} {$t = $e.v >  $d.v;}
-    | '<=' d = expr {System.out.println("Lido '<='");} {System.out.println("Resultado: " + $d.v);} {$t = $e.v <= $d.v;}
-    | '>=' d = expr {System.out.println("Lido '>='");} {System.out.println("Resultado: " + $d.v);} {$t = $e.v >= $d.v;}
+    ( e = expr ) 
+    ( '='  d = expr {$t = $e.v == $d.v;} {System.out.println($e.v + " = " + $d.v + " : " + $t);}
+    | '<>' d = expr {$t = $e.v != $d.v;} {System.out.println($e.v + " <> " + $d.v + " : " + $t);}
+    | '<'  d = expr {$t = $e.v <  $d.v;} {System.out.println($e.v + " < " + $d.v + " : " + $t);}
+    | '>'  d = expr {$t = $e.v >  $d.v;} {System.out.println($e.v + " > " + $d.v + " : " + $t);}
+    | '<=' d = expr {$t = $e.v <= $d.v;} {System.out.println($e.v + " <= " + $d.v + " : " + $t);}
+    | '>=' d = expr {$t = $e.v >= $d.v;} {System.out.println($e.v + " >= " + $d.v + " : " + $t);}
     )
     ;
-
+//{ $op = '=';} {$t = $e.v == $d.v;} {System.out.println($e.v + $op + $d.v + '=' + $t);}
 INT : ('0'..'9')+ ;
 VAR : ('a'..'z')+ ;
 
