@@ -43,7 +43,7 @@ atribuicao
     :
     VAR ':=' expr 
     { memory.put($VAR.text, new Double($expr.v)); } 
-    { System.out.println("Variavel " + $VAR.text + " : " + $expr.v); }
+    { System.out.println("Variavel " + $VAR.text + " = " + $expr.v + " inserida na memória"); }
     ;
 
 teste
@@ -59,8 +59,8 @@ teste2
 
 expr returns [ double v ]
     :
-    ( INT { $v = Double.parseDouble($INT.text); } {System.out.println("lido: " + $v);}
-    | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("lido: " + $v);} )
+    ( INT { $v = Double.parseDouble($INT.text); } {System.out.println("Lido valor constante: " + $v);}
+    | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("Lido da memória de variáveis: " + $v);} )
     ( '+' {System.out.println("lido: + ");} e = expr {$v += $e.v;} {System.out.println("Resultado da soma: " + $v);}
     | '-' {System.out.println("lido: - ");} e = expr {$v -= $e.v;} {System.out.println("Resultado da subtracao: " + $v);}
     | '*' {System.out.println("lido: * ");} e = expr {$v *= $e.v;} {System.out.println("Resultado da multiplicacao: " + $v);}
@@ -73,12 +73,12 @@ expr returns [ double v ]
 rel returns [ boolean t ]
     : 
     ( e = expr ) 
-    ( '='  d = expr {$t = $e.v == $d.v;} {System.out.println($e.v + " = " + $d.v + " : " + $t);}
-    | '<>' d = expr {$t = $e.v != $d.v;} {System.out.println($e.v + " <> " + $d.v + " : " + $t);}
-    | '<'  d = expr {$t = $e.v <  $d.v;} {System.out.println($e.v + " < " + $d.v + " : " + $t);}
-    | '>'  d = expr {$t = $e.v >  $d.v;} {System.out.println($e.v + " > " + $d.v + " : " + $t);}
-    | '<=' d = expr {$t = $e.v <= $d.v;} {System.out.println($e.v + " <= " + $d.v + " : " + $t);}
-    | '>=' d = expr {$t = $e.v >= $d.v;} {System.out.println($e.v + " >= " + $d.v + " : " + $t);}
+    ( '='  {System.out.println("Lido expr rel: = ");} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado expr rel " + $e.v + " = " + $d.v + " : " + $t);}
+    | '<>' {System.out.println("Lido expr rel: <> ");} d = expr {$t = $e.v != $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <> " + $d.v + " : " + $t);}
+    | '<'  {System.out.println("Lido expr rel: < ");} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " < " + $d.v + " : " + $t);}
+    | '>'  {System.out.println("Lido expr rel: > ");} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " > " + $d.v + " : " + $t);}
+    | '<=' {System.out.println("Lido expr rel: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <= " + $d.v + " : " + $t);}
+    | '>=' {System.out.println("Lido expr rel: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " >= " + $d.v + " : " + $t);}
     )
     ;
 //{ $op = '=';} {$t = $e.v == $d.v;} {System.out.println($e.v + $op + $d.v + '=' + $t);}
