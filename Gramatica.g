@@ -50,10 +50,9 @@ atribuicao
 condicao
     :
       //('if' rel 'then' comandos) teste2 
-      IF rel (
+      IF rel
      	 (THEN comandos)?
      	 (ELSE comandos)?
-      )?
 	;
 	
 //teste2
