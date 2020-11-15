@@ -37,7 +37,7 @@ comando
 
 iteracao
     :
-	'while' rel 'do' comandos
+	WHILE rel DO comandos
 	;
 
 atribuicao
@@ -49,15 +49,14 @@ atribuicao
 
 condicao
     :
-      'if'condicaoPart 'end' 'if' comandos
+      IF rel THEN
+        (comandos)*
+        condicaoPart
     ;
 
 condicaoPart
-    :   rel 'then'
-        (comandos)*
-        (   'elsif' condicaoPart
-        |   'else' (comandos)*
-        )?
+    :
+      (ELSE (comandos)*)?
     ;
 
 
@@ -83,19 +82,20 @@ rel returns [ boolean t ]
     | '>'  {System.out.println("Lido expr rel: > ");} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " > " + $d.v + " : " + $t); result = $t;} 
     | '<=' {System.out.println("Lido expr rel: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <= " + $d.v + " : " + $t); result = $t;}
     | '>=' {System.out.println("Lido expr rel: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " >= " + $d.v + " : " + $t); result = $t;}
-    )
-    
+    )   
+    //{if (result == false) returns comandos;}  
     ;
 //{ $op = '=';} {$t = $e.v == $d.v;} {System.out.println($e.v + $op + $d.v + '=' + $t);}
 
-DO: 'do';
-ELSE: 'else';
-IF: 'if';
+DO   : 'do';
+ELSE : 'else';
+IF   : 'if';
 WHILE: 'while';
 THEN : 'then';
+END  : 'end';
 
-INT : ('0'..'9')+ ;
-VAR : ('a'..'z')+ ;
+INT  : ('0'..'9')+ ;
+VAR  : ('a'..'z')+ ;
 
-WS  : (' '|'\n'|'\r')+ {skip();} ;
+WS   : (' '|'\n'|'\r')+ {skip();} ;
 
