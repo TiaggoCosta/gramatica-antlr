@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g 2020-11-08 17:30:50
+// $ANTLR 3.5.1 C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g 2020-11-14 21:17:04
 
     import java.util.HashMap;
 
@@ -15,7 +15,7 @@ public class GramaticaParser extends DebugParser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "DO", "ELSE", "IF", "INT", "THEN", 
 		"VAR", "WHILE", "WS", "'('", "')'", "'*'", "'+'", "'-'", "'/'", "':='", 
-		"';'", "'<'", "'<='", "'<>'", "'='", "'>'", "'>='"
+		"';'", "'<'", "'<='", "'<>'", "'='", "'>'", "'>='", "'elsif'", "'end'"
 	};
 	public static final int EOF=-1;
 	public static final int T__12=12;
@@ -32,6 +32,8 @@ public class GramaticaParser extends DebugParser {
 	public static final int T__23=23;
 	public static final int T__24=24;
 	public static final int T__25=25;
+	public static final int T__26=26;
+	public static final int T__27=27;
 	public static final int DO=4;
 	public static final int ELSE=5;
 	public static final int IF=6;
@@ -50,13 +52,13 @@ public class GramaticaParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "rel", "condicao", "stat", "expr", "comando", "iteracao", 
-		"prog", "comandos", "atribuicao"
+		"invalidRule", "rel", "stat", "comando", "condicaoPart", "expr", "condicao", 
+		"comandos", "iteracao", "atribuicao", "prog"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
 		false, // invalid decision
-		false, false, false, false, false, false, false, false, false
+		false, false, false, false, false, false, false, false, false, false
 	};
 
  
@@ -514,7 +516,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "condicao"
-	// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:50:1: condicao : IF rel ( THEN comandos )? ( ELSE comandos )? ;
+	// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:50:1: condicao : 'if' condicaoPart 'end' 'if' comandos ;
 	public final void condicao() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "condicao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -522,74 +524,22 @@ public class GramaticaParser extends DebugParser {
 		dbg.location(50, 0);
 
 		try {
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:51:5: ( IF rel ( THEN comandos )? ( ELSE comandos )? )
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:51:5: ( 'if' condicaoPart 'end' 'if' comandos )
 			dbg.enterAlt(1);
 
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:53:7: IF rel ( THEN comandos )? ( ELSE comandos )?
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:52:7: 'if' condicaoPart 'end' 'if' comandos
 			{
-			dbg.location(53,7);
-			match(input,IF,FOLLOW_IF_in_condicao209); dbg.location(53,10);
-			pushFollow(FOLLOW_rel_in_condicao211);
-			rel();
+			dbg.location(52,7);
+			match(input,IF,FOLLOW_IF_in_condicao202); dbg.location(52,11);
+			pushFollow(FOLLOW_condicaoPart_in_condicao203);
+			condicaoPart();
 			state._fsp--;
-			dbg.location(54,8);
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:54:8: ( THEN comandos )?
-			int alt4=2;
-			try { dbg.enterSubRule(4);
-			try { dbg.enterDecision(4, decisionCanBacktrack[4]);
-
-			int LA4_0 = input.LA(1);
-			if ( (LA4_0==THEN) ) {
-				alt4=1;
-			}
-			} finally {dbg.exitDecision(4);}
-
-			switch (alt4) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:54:9: THEN comandos
-					{
-					dbg.location(54,9);
-					match(input,THEN,FOLLOW_THEN_in_condicao221); dbg.location(54,14);
-					pushFollow(FOLLOW_comandos_in_condicao223);
-					comandos();
-					state._fsp--;
-
-					}
-					break;
-
-			}
-			} finally {dbg.exitSubRule(4);}
-			dbg.location(55,8);
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:55:8: ( ELSE comandos )?
-			int alt5=2;
-			try { dbg.enterSubRule(5);
-			try { dbg.enterDecision(5, decisionCanBacktrack[5]);
-
-			int LA5_0 = input.LA(1);
-			if ( (LA5_0==ELSE) ) {
-				alt5=1;
-			}
-			} finally {dbg.exitDecision(5);}
-
-			switch (alt5) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:55:9: ELSE comandos
-					{
-					dbg.location(55,9);
-					match(input,ELSE,FOLLOW_ELSE_in_condicao235); dbg.location(55,14);
-					pushFollow(FOLLOW_comandos_in_condicao237);
-					comandos();
-					state._fsp--;
-
-					}
-					break;
-
-			}
-			} finally {dbg.exitSubRule(5);}
+			dbg.location(52,24);
+			match(input,27,FOLLOW_27_in_condicao205); dbg.location(52,30);
+			match(input,IF,FOLLOW_IF_in_condicao207); dbg.location(52,35);
+			pushFollow(FOLLOW_comandos_in_condicao209);
+			comandos();
+			state._fsp--;
 
 			}
 
@@ -601,7 +551,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(56, 1);
+		dbg.location(53, 4);
 
 		}
 		finally {
@@ -612,6 +562,161 @@ public class GramaticaParser extends DebugParser {
 
 	}
 	// $ANTLR end "condicao"
+
+
+
+	// $ANTLR start "condicaoPart"
+	// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:55:1: condicaoPart : rel 'then' ( comandos )* ( 'elsif' condicaoPart | 'else' ( comandos )* )? ;
+	public final void condicaoPart() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "condicaoPart");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(55, 0);
+
+		try {
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:56:5: ( rel 'then' ( comandos )* ( 'elsif' condicaoPart | 'else' ( comandos )* )? )
+			dbg.enterAlt(1);
+
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:56:9: rel 'then' ( comandos )* ( 'elsif' condicaoPart | 'else' ( comandos )* )?
+			{
+			dbg.location(56,9);
+			pushFollow(FOLLOW_rel_in_condicaoPart228);
+			rel();
+			state._fsp--;
+			dbg.location(56,13);
+			match(input,THEN,FOLLOW_THEN_in_condicaoPart230); dbg.location(57,9);
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:57:9: ( comandos )*
+			try { dbg.enterSubRule(4);
+
+			loop4:
+			while (true) {
+				int alt4=2;
+				try { dbg.enterDecision(4, decisionCanBacktrack[4]);
+
+				int LA4_0 = input.LA(1);
+				if ( (LA4_0==IF||(LA4_0 >= VAR && LA4_0 <= WHILE)) ) {
+					alt4=1;
+				}
+
+				} finally {dbg.exitDecision(4);}
+
+				switch (alt4) {
+				case 1 :
+					dbg.enterAlt(1);
+
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:57:10: comandos
+					{
+					dbg.location(57,10);
+					pushFollow(FOLLOW_comandos_in_condicaoPart241);
+					comandos();
+					state._fsp--;
+
+					}
+					break;
+
+				default :
+					break loop4;
+				}
+			}
+			} finally {dbg.exitSubRule(4);}
+			dbg.location(58,9);
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:58:9: ( 'elsif' condicaoPart | 'else' ( comandos )* )?
+			int alt6=3;
+			try { dbg.enterSubRule(6);
+			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
+
+			int LA6_0 = input.LA(1);
+			if ( (LA6_0==26) ) {
+				alt6=1;
+			}
+			else if ( (LA6_0==ELSE) ) {
+				alt6=2;
+			}
+			} finally {dbg.exitDecision(6);}
+
+			switch (alt6) {
+				case 1 :
+					dbg.enterAlt(1);
+
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:58:13: 'elsif' condicaoPart
+					{
+					dbg.location(58,13);
+					match(input,26,FOLLOW_26_in_condicaoPart257); dbg.location(58,21);
+					pushFollow(FOLLOW_condicaoPart_in_condicaoPart259);
+					condicaoPart();
+					state._fsp--;
+
+					}
+					break;
+				case 2 :
+					dbg.enterAlt(2);
+
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:59:13: 'else' ( comandos )*
+					{
+					dbg.location(59,13);
+					match(input,ELSE,FOLLOW_ELSE_in_condicaoPart273); dbg.location(59,20);
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:59:20: ( comandos )*
+					try { dbg.enterSubRule(5);
+
+					loop5:
+					while (true) {
+						int alt5=2;
+						try { dbg.enterDecision(5, decisionCanBacktrack[5]);
+
+						int LA5_0 = input.LA(1);
+						if ( (LA5_0==IF||(LA5_0 >= VAR && LA5_0 <= WHILE)) ) {
+							alt5=1;
+						}
+
+						} finally {dbg.exitDecision(5);}
+
+						switch (alt5) {
+						case 1 :
+							dbg.enterAlt(1);
+
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:59:21: comandos
+							{
+							dbg.location(59,21);
+							pushFollow(FOLLOW_comandos_in_condicaoPart276);
+							comandos();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop5;
+						}
+					}
+					} finally {dbg.exitSubRule(5);}
+
+					}
+					break;
+
+			}
+			} finally {dbg.exitSubRule(6);}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(61, 4);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "condicaoPart");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "condicaoPart"
 
 
 
@@ -632,110 +737,109 @@ public class GramaticaParser extends DebugParser {
 
 		try {
 			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:65:5: ( ( INT | VAR ) ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |) | '(' e= expr ')' )
-			int alt8=2;
-			try { dbg.enterDecision(8, decisionCanBacktrack[8]);
+			int alt9=2;
+			try { dbg.enterDecision(9, decisionCanBacktrack[9]);
 
-			int LA8_0 = input.LA(1);
-			if ( (LA8_0==INT||LA8_0==VAR) ) {
-				alt8=1;
+			int LA9_0 = input.LA(1);
+			if ( (LA9_0==INT||LA9_0==VAR) ) {
+				alt9=1;
 			}
-			else if ( (LA8_0==12) ) {
-				alt8=2;
+			else if ( (LA9_0==12) ) {
+				alt9=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 8, 0, input);
+					new NoViableAltException("", 9, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
 
-			} finally {dbg.exitDecision(8);}
+			} finally {dbg.exitDecision(9);}
 
-			switch (alt8) {
+			switch (alt9) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:68:5: ( INT | VAR ) ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:66:5: ( INT | VAR ) ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
 					{
-					dbg.location(68,5);
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:68:5: ( INT | VAR )
-					int alt6=2;
-					try { dbg.enterSubRule(6);
-					try { dbg.enterDecision(6, decisionCanBacktrack[6]);
+					dbg.location(66,5);
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:66:5: ( INT | VAR )
+					int alt7=2;
+					try { dbg.enterSubRule(7);
+					try { dbg.enterDecision(7, decisionCanBacktrack[7]);
 
-					int LA6_0 = input.LA(1);
-					if ( (LA6_0==INT) ) {
-						alt6=1;
+					int LA7_0 = input.LA(1);
+					if ( (LA7_0==INT) ) {
+						alt7=1;
 					}
-					else if ( (LA6_0==VAR) ) {
-						alt6=2;
+					else if ( (LA7_0==VAR) ) {
+						alt7=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 6, 0, input);
+							new NoViableAltException("", 7, 0, input);
 						dbg.recognitionException(nvae);
 						throw nvae;
 					}
 
-					} finally {dbg.exitDecision(6);}
+					} finally {dbg.exitDecision(7);}
 
-					switch (alt6) {
+					switch (alt7) {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:68:7: INT
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:66:7: INT
 							{
-							dbg.location(68,7);
-							INT3=(Token)match(input,INT,FOLLOW_INT_in_expr283); dbg.location(68,11);
-							 v = Double.parseDouble((INT3!=null?INT3.getText():null)); dbg.location(68,51);
+							dbg.location(66,7);
+							INT3=(Token)match(input,INT,FOLLOW_INT_in_expr317); dbg.location(66,11);
+							 v = Double.parseDouble((INT3!=null?INT3.getText():null)); dbg.location(66,51);
 							System.out.println("Lido valor constante: " + v);
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:69:7: VAR
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:67:7: VAR
 							{
-							dbg.location(69,7);
-							VAR4=(Token)match(input,VAR,FOLLOW_VAR_in_expr295); dbg.location(69,11);
-							 v = memory.getOrDefault((VAR4!=null?VAR4.getText():null), 0.0); dbg.location(69,57);
+							dbg.location(67,7);
+							VAR4=(Token)match(input,VAR,FOLLOW_VAR_in_expr329); dbg.location(67,11);
+							 v = memory.getOrDefault((VAR4!=null?VAR4.getText():null), 0.0); dbg.location(67,57);
 							System.out.println("Lido da memória de variáveis: " + v);
 							}
 							break;
 
 					}
-					} finally {dbg.exitSubRule(6);}
-					dbg.location(70,5);
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:70:5: ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
-					int alt7=5;
-					try { dbg.enterSubRule(7);
-					try { dbg.enterDecision(7, decisionCanBacktrack[7]);
+					} finally {dbg.exitSubRule(7);}
+					dbg.location(68,5);
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:68:5: ( '+' e= expr | '-' e= expr | '*' e= expr | '/' e= expr |)
+					int alt8=5;
+					try { dbg.enterSubRule(8);
+					try { dbg.enterDecision(8, decisionCanBacktrack[8]);
 
 					switch ( input.LA(1) ) {
 					case 15:
 						{
-						alt7=1;
+						alt8=1;
 						}
 						break;
 					case 16:
 						{
-						alt7=2;
+						alt8=2;
 						}
 						break;
 					case 14:
 						{
-						alt7=3;
+						alt8=3;
 						}
 						break;
 					case 17:
 						{
-						alt7=4;
+						alt8=4;
 						}
 						break;
 					case DO:
-					case ELSE:
 					case THEN:
 					case 13:
 					case 19:
@@ -746,108 +850,108 @@ public class GramaticaParser extends DebugParser {
 					case 24:
 					case 25:
 						{
-						alt7=5;
+						alt8=5;
 						}
 						break;
 					default:
 						NoViableAltException nvae =
-							new NoViableAltException("", 7, 0, input);
+							new NoViableAltException("", 8, 0, input);
 						dbg.recognitionException(nvae);
 						throw nvae;
 					}
-					} finally {dbg.exitDecision(7);}
+					} finally {dbg.exitDecision(8);}
 
-					switch (alt7) {
+					switch (alt8) {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:70:7: '+' e= expr
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:68:7: '+' e= expr
 							{
-							dbg.location(70,7);
-							match(input,15,FOLLOW_15_in_expr309); dbg.location(70,11);
-							System.out.println("lido: + ");dbg.location(70,47);
-							pushFollow(FOLLOW_expr_in_expr317);
+							dbg.location(68,7);
+							match(input,15,FOLLOW_15_in_expr343); dbg.location(68,11);
+							System.out.println("lido: + ");dbg.location(68,47);
+							pushFollow(FOLLOW_expr_in_expr351);
 							e=expr();
 							state._fsp--;
-							dbg.location(70,54);
-							v += e;dbg.location(70,68);
+							dbg.location(68,54);
+							v += e;dbg.location(68,68);
 							System.out.println("Resultado da soma: " + v);
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:71:7: '-' e= expr
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:69:7: '-' e= expr
 							{
-							dbg.location(71,7);
-							match(input,16,FOLLOW_16_in_expr329); dbg.location(71,11);
-							System.out.println("lido: - ");dbg.location(71,47);
-							pushFollow(FOLLOW_expr_in_expr337);
+							dbg.location(69,7);
+							match(input,16,FOLLOW_16_in_expr363); dbg.location(69,11);
+							System.out.println("lido: - ");dbg.location(69,47);
+							pushFollow(FOLLOW_expr_in_expr371);
 							e=expr();
 							state._fsp--;
-							dbg.location(71,54);
-							v -= e;dbg.location(71,68);
+							dbg.location(69,54);
+							v -= e;dbg.location(69,68);
 							System.out.println("Resultado da subtracao: " + v);
 							}
 							break;
 						case 3 :
 							dbg.enterAlt(3);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:72:7: '*' e= expr
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:70:7: '*' e= expr
 							{
-							dbg.location(72,7);
-							match(input,14,FOLLOW_14_in_expr349); dbg.location(72,11);
-							System.out.println("lido: * ");dbg.location(72,47);
-							pushFollow(FOLLOW_expr_in_expr357);
+							dbg.location(70,7);
+							match(input,14,FOLLOW_14_in_expr383); dbg.location(70,11);
+							System.out.println("lido: * ");dbg.location(70,47);
+							pushFollow(FOLLOW_expr_in_expr391);
 							e=expr();
 							state._fsp--;
-							dbg.location(72,54);
-							v *= e;dbg.location(72,68);
+							dbg.location(70,54);
+							v *= e;dbg.location(70,68);
 							System.out.println("Resultado da multiplicacao: " + v);
 							}
 							break;
 						case 4 :
 							dbg.enterAlt(4);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:73:7: '/' e= expr
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:71:7: '/' e= expr
 							{
-							dbg.location(73,7);
-							match(input,17,FOLLOW_17_in_expr369); dbg.location(73,11);
-							System.out.println("lido: / ");dbg.location(73,47);
-							pushFollow(FOLLOW_expr_in_expr377);
+							dbg.location(71,7);
+							match(input,17,FOLLOW_17_in_expr403); dbg.location(71,11);
+							System.out.println("lido: / ");dbg.location(71,47);
+							pushFollow(FOLLOW_expr_in_expr411);
 							e=expr();
 							state._fsp--;
-							dbg.location(73,54);
-							v /= e;dbg.location(73,68);
+							dbg.location(71,54);
+							v /= e;dbg.location(71,68);
 							System.out.println("Resultado da divisao: " + v);
 							}
 							break;
 						case 5 :
 							dbg.enterAlt(5);
 
-							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:75:5: 
+							// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:73:5: 
 							{
 							}
 							break;
 
 					}
-					} finally {dbg.exitSubRule(7);}
+					} finally {dbg.exitSubRule(8);}
 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:76:7: '(' e= expr ')'
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:74:7: '(' e= expr ')'
 					{
-					dbg.location(76,7);
-					match(input,12,FOLLOW_12_in_expr401); dbg.location(76,13);
-					pushFollow(FOLLOW_expr_in_expr407);
+					dbg.location(74,7);
+					match(input,12,FOLLOW_12_in_expr435); dbg.location(74,13);
+					pushFollow(FOLLOW_expr_in_expr441);
 					e=expr();
 					state._fsp--;
-					dbg.location(76,20);
-					v = e;dbg.location(76,33);
-					match(input,13,FOLLOW_13_in_expr411); 
+					dbg.location(74,20);
+					v = e;dbg.location(74,33);
+					match(input,13,FOLLOW_13_in_expr445); 
 					}
 					break;
 
@@ -860,7 +964,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(77, 4);
+		dbg.location(75, 4);
 
 		}
 		finally {
@@ -876,7 +980,7 @@ public class GramaticaParser extends DebugParser {
 
 
 	// $ANTLR start "rel"
-	// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:79:1: rel returns [ boolean t ] : (e= expr ) ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr ) ;
+	// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:77:1: rel returns [ boolean t ] : (e= expr ) ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr ) ;
 	public final boolean rel() throws RecognitionException {
 		boolean t = false;
 
@@ -887,171 +991,171 @@ public class GramaticaParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "rel");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(79, 0);
+		dbg.location(77, 0);
 
 		try {
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:80:5: ( (e= expr ) ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr ) )
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:78:5: ( (e= expr ) ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr ) )
 			dbg.enterAlt(1);
 
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:81:5: (e= expr ) ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr )
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:79:5: (e= expr ) ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr )
 			{
-			dbg.location(81,5);
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:81:5: (e= expr )
+			dbg.location(79,5);
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:79:5: (e= expr )
 			dbg.enterAlt(1);
 
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:81:7: e= expr
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:79:7: e= expr
 			{
-			dbg.location(81,9);
-			pushFollow(FOLLOW_expr_in_rel444);
+			dbg.location(79,9);
+			pushFollow(FOLLOW_expr_in_rel477);
 			e=expr();
 			state._fsp--;
 
 			}
-			dbg.location(82,5);
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:82:5: ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr )
-			int alt9=6;
-			try { dbg.enterSubRule(9);
-			try { dbg.enterDecision(9, decisionCanBacktrack[9]);
+			dbg.location(80,5);
+			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:80:5: ( '=' d= expr | '<>' d= expr | '<' d= expr | '>' d= expr | '<=' d= expr | '>=' d= expr )
+			int alt10=6;
+			try { dbg.enterSubRule(10);
+			try { dbg.enterDecision(10, decisionCanBacktrack[10]);
 
 			switch ( input.LA(1) ) {
 			case 23:
 				{
-				alt9=1;
+				alt10=1;
 				}
 				break;
 			case 22:
 				{
-				alt9=2;
+				alt10=2;
 				}
 				break;
 			case 20:
 				{
-				alt9=3;
+				alt10=3;
 				}
 				break;
 			case 24:
 				{
-				alt9=4;
+				alt10=4;
 				}
 				break;
 			case 21:
 				{
-				alt9=5;
+				alt10=5;
 				}
 				break;
 			case 25:
 				{
-				alt9=6;
+				alt10=6;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 9, 0, input);
+					new NoViableAltException("", 10, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-			} finally {dbg.exitDecision(9);}
+			} finally {dbg.exitDecision(10);}
 
-			switch (alt9) {
+			switch (alt10) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:82:7: '=' d= expr
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:80:7: '=' d= expr
 					{
-					dbg.location(82,7);
-					match(input,23,FOLLOW_23_in_rel455); dbg.location(82,12);
-					System.out.println("Lido expr rel: = ");dbg.location(82,57);
-					pushFollow(FOLLOW_expr_in_rel464);
+					dbg.location(80,7);
+					match(input,23,FOLLOW_23_in_rel488); dbg.location(80,12);
+					System.out.println("Lido expr rel: = ");dbg.location(80,57);
+					pushFollow(FOLLOW_expr_in_rel497);
 					d=expr();
 					state._fsp--;
-					dbg.location(82,64);
-					t = e == d;dbg.location(82,85);
+					dbg.location(80,64);
+					t = e == d;dbg.location(80,85);
 					System.out.println("Resultado expr rel " + e + " = " + d + " : " + t); result = t;
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:83:7: '<>' d= expr
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:81:7: '<>' d= expr
 					{
-					dbg.location(83,7);
-					match(input,22,FOLLOW_22_in_rel477); dbg.location(83,12);
-					System.out.println("Lido expr rel: <> ");dbg.location(83,58);
-					pushFollow(FOLLOW_expr_in_rel485);
+					dbg.location(81,7);
+					match(input,22,FOLLOW_22_in_rel510); dbg.location(81,12);
+					System.out.println("Lido expr rel: <> ");dbg.location(81,58);
+					pushFollow(FOLLOW_expr_in_rel518);
 					d=expr();
 					state._fsp--;
-					dbg.location(83,65);
-					t = e != d;dbg.location(83,86);
+					dbg.location(81,65);
+					t = e != d;dbg.location(81,86);
 					System.out.println("Resultado expr rel " + e + " <> " + d + " : " + t); result = t;
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:84:7: '<' d= expr
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:82:7: '<' d= expr
 					{
-					dbg.location(84,7);
-					match(input,20,FOLLOW_20_in_rel498); dbg.location(84,12);
-					System.out.println("Lido expr rel: < ");dbg.location(84,57);
-					pushFollow(FOLLOW_expr_in_rel507);
+					dbg.location(82,7);
+					match(input,20,FOLLOW_20_in_rel531); dbg.location(82,12);
+					System.out.println("Lido expr rel: < ");dbg.location(82,57);
+					pushFollow(FOLLOW_expr_in_rel540);
 					d=expr();
 					state._fsp--;
-					dbg.location(84,64);
-					t = e <  d;dbg.location(84,85);
+					dbg.location(82,64);
+					t = e <  d;dbg.location(82,85);
 					System.out.println("Resultado expr rel " + e + " < " + d + " : " + t); result = t;
 					}
 					break;
 				case 4 :
 					dbg.enterAlt(4);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:85:7: '>' d= expr
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:83:7: '>' d= expr
 					{
-					dbg.location(85,7);
-					match(input,24,FOLLOW_24_in_rel519); dbg.location(85,12);
-					System.out.println("Lido expr rel: > ");dbg.location(85,57);
-					pushFollow(FOLLOW_expr_in_rel528);
+					dbg.location(83,7);
+					match(input,24,FOLLOW_24_in_rel552); dbg.location(83,12);
+					System.out.println("Lido expr rel: > ");dbg.location(83,57);
+					pushFollow(FOLLOW_expr_in_rel561);
 					d=expr();
 					state._fsp--;
-					dbg.location(85,64);
-					t = e >  d;dbg.location(85,85);
+					dbg.location(83,64);
+					t = e >  d;dbg.location(83,85);
 					System.out.println("Resultado expr rel " + e + " > " + d + " : " + t); result = t;
 					}
 					break;
 				case 5 :
 					dbg.enterAlt(5);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:86:7: '<=' d= expr
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:84:7: '<=' d= expr
 					{
-					dbg.location(86,7);
-					match(input,21,FOLLOW_21_in_rel541); dbg.location(86,12);
-					System.out.println("Lido expr rel: <= ");dbg.location(86,58);
-					pushFollow(FOLLOW_expr_in_rel549);
+					dbg.location(84,7);
+					match(input,21,FOLLOW_21_in_rel574); dbg.location(84,12);
+					System.out.println("Lido expr rel: <= ");dbg.location(84,58);
+					pushFollow(FOLLOW_expr_in_rel582);
 					d=expr();
 					state._fsp--;
-					dbg.location(86,65);
-					t = e <= d;dbg.location(86,86);
+					dbg.location(84,65);
+					t = e <= d;dbg.location(84,86);
 					System.out.println("Resultado expr rel " + e + " <= " + d + " : " + t); result = t;
 					}
 					break;
 				case 6 :
 					dbg.enterAlt(6);
 
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:87:7: '>=' d= expr
+					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:85:7: '>=' d= expr
 					{
-					dbg.location(87,7);
-					match(input,25,FOLLOW_25_in_rel561); dbg.location(87,12);
-					System.out.println("Lido expr rel: >= ");dbg.location(87,58);
-					pushFollow(FOLLOW_expr_in_rel569);
+					dbg.location(85,7);
+					match(input,25,FOLLOW_25_in_rel594); dbg.location(85,12);
+					System.out.println("Lido expr rel: >= ");dbg.location(85,58);
+					pushFollow(FOLLOW_expr_in_rel602);
 					d=expr();
 					state._fsp--;
-					dbg.location(87,65);
-					t = e >= d;dbg.location(87,86);
+					dbg.location(85,65);
+					t = e >= d;dbg.location(85,86);
 					System.out.println("Resultado expr rel " + e + " >= " + d + " : " + t); result = t;
 					}
 					break;
 
 			}
-			} finally {dbg.exitSubRule(9);}
+			} finally {dbg.exitSubRule(10);}
 
 			}
 
@@ -1063,7 +1167,7 @@ public class GramaticaParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(89, 4);
+		dbg.location(88, 4);
 
 		}
 		finally {
@@ -1095,36 +1199,42 @@ public class GramaticaParser extends DebugParser {
 	public static final BitSet FOLLOW_VAR_in_atribuicao161 = new BitSet(new long[]{0x0000000000040000L});
 	public static final BitSet FOLLOW_18_in_atribuicao163 = new BitSet(new long[]{0x0000000000001280L});
 	public static final BitSet FOLLOW_expr_in_atribuicao165 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_condicao209 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_rel_in_condicao211 = new BitSet(new long[]{0x0000000000000122L});
-	public static final BitSet FOLLOW_THEN_in_condicao221 = new BitSet(new long[]{0x0000000000000640L});
-	public static final BitSet FOLLOW_comandos_in_condicao223 = new BitSet(new long[]{0x0000000000000022L});
-	public static final BitSet FOLLOW_ELSE_in_condicao235 = new BitSet(new long[]{0x0000000000000640L});
-	public static final BitSet FOLLOW_comandos_in_condicao237 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr283 = new BitSet(new long[]{0x000000000003C002L});
-	public static final BitSet FOLLOW_VAR_in_expr295 = new BitSet(new long[]{0x000000000003C002L});
-	public static final BitSet FOLLOW_15_in_expr309 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_expr317 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_16_in_expr329 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_expr337 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_14_in_expr349 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_expr357 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_17_in_expr369 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_expr377 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_12_in_expr401 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_expr407 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_13_in_expr411 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_rel444 = new BitSet(new long[]{0x0000000003F00000L});
-	public static final BitSet FOLLOW_23_in_rel455 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_rel464 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_22_in_rel477 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_rel485 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_rel498 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_rel507 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_24_in_rel519 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_rel528 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_21_in_rel541 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_rel549 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_25_in_rel561 = new BitSet(new long[]{0x0000000000001280L});
-	public static final BitSet FOLLOW_expr_in_rel569 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_condicao202 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_condicaoPart_in_condicao203 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_27_in_condicao205 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_IF_in_condicao207 = new BitSet(new long[]{0x0000000000000640L});
+	public static final BitSet FOLLOW_comandos_in_condicao209 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_rel_in_condicaoPart228 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_THEN_in_condicaoPart230 = new BitSet(new long[]{0x0000000004000662L});
+	public static final BitSet FOLLOW_comandos_in_condicaoPart241 = new BitSet(new long[]{0x0000000004000662L});
+	public static final BitSet FOLLOW_26_in_condicaoPart257 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_condicaoPart_in_condicaoPart259 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ELSE_in_condicaoPart273 = new BitSet(new long[]{0x0000000000000642L});
+	public static final BitSet FOLLOW_comandos_in_condicaoPart276 = new BitSet(new long[]{0x0000000000000642L});
+	public static final BitSet FOLLOW_INT_in_expr317 = new BitSet(new long[]{0x000000000003C002L});
+	public static final BitSet FOLLOW_VAR_in_expr329 = new BitSet(new long[]{0x000000000003C002L});
+	public static final BitSet FOLLOW_15_in_expr343 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_expr351 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_16_in_expr363 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_expr371 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_14_in_expr383 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_expr391 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_17_in_expr403 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_expr411 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_expr435 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_expr441 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_13_in_expr445 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_rel477 = new BitSet(new long[]{0x0000000003F00000L});
+	public static final BitSet FOLLOW_23_in_rel488 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_rel497 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_22_in_rel510 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_rel518 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_20_in_rel531 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_rel540 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_24_in_rel552 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_rel561 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_21_in_rel574 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_rel582 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_25_in_rel594 = new BitSet(new long[]{0x0000000000001280L});
+	public static final BitSet FOLLOW_expr_in_rel602 = new BitSet(new long[]{0x0000000000000002L});
 }
