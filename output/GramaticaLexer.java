@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g 2020-11-14 23:22:39
+// $ANTLR 3.5.1 C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g 2020-11-17 21:02:45
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -45,15 +45,15 @@ public class GramaticaLexer extends Lexer {
 	public GramaticaLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g"; }
 
 	// $ANTLR start "T__13"
 	public final void mT__13() throws RecognitionException {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:7:7: ( '(' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:7:9: '('
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:7:7: ( '(' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:7:9: '('
 			{
 			match('('); 
 			}
@@ -72,8 +72,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:8:7: ( ')' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:8:9: ')'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:8:7: ( ')' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:8:9: ')'
 			{
 			match(')'); 
 			}
@@ -92,8 +92,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:9:7: ( '*' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:9:9: '*'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:9:7: ( '*' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:9:9: '*'
 			{
 			match('*'); 
 			}
@@ -112,8 +112,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:10:7: ( '+' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:10:9: '+'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:10:7: ( '+' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:10:9: '+'
 			{
 			match('+'); 
 			}
@@ -132,8 +132,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:11:7: ( '-' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:11:9: '-'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:11:7: ( '-' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:11:9: '-'
 			{
 			match('-'); 
 			}
@@ -152,8 +152,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:12:7: ( '/' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:12:9: '/'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:12:7: ( '/' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:12:9: '/'
 			{
 			match('/'); 
 			}
@@ -172,8 +172,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:13:7: ( ':=' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:13:9: ':='
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:13:7: ( ':=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:13:9: ':='
 			{
 			match(":="); 
 
@@ -193,8 +193,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:14:7: ( ';' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:14:9: ';'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:14:7: ( ';' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:14:9: ';'
 			{
 			match(';'); 
 			}
@@ -213,8 +213,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:15:7: ( '<' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:15:9: '<'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:15:7: ( '<' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:15:9: '<'
 			{
 			match('<'); 
 			}
@@ -233,8 +233,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:16:7: ( '<=' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:16:9: '<='
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:16:7: ( '<=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:16:9: '<='
 			{
 			match("<="); 
 
@@ -254,8 +254,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:17:7: ( '<>' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:17:9: '<>'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:17:7: ( '<>' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:17:9: '<>'
 			{
 			match("<>"); 
 
@@ -275,8 +275,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:18:7: ( '=' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:18:9: '='
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:18:7: ( '=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:18:9: '='
 			{
 			match('='); 
 			}
@@ -295,8 +295,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:19:7: ( '>' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:19:9: '>'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:19:7: ( '>' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:19:9: '>'
 			{
 			match('>'); 
 			}
@@ -315,8 +315,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:20:7: ( '>=' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:20:9: '>='
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:7: ( '>=' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:20:9: '>='
 			{
 			match(">="); 
 
@@ -336,8 +336,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = DO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:90:6: ( 'do' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:90:8: 'do'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:88:6: ( 'do' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:88:8: 'do'
 			{
 			match("do"); 
 
@@ -357,8 +357,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:91:6: ( 'else' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:91:8: 'else'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:89:6: ( 'else' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:89:8: 'else'
 			{
 			match("else"); 
 
@@ -378,8 +378,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:92:6: ( 'if' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:92:8: 'if'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:90:6: ( 'if' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:90:8: 'if'
 			{
 			match("if"); 
 
@@ -399,8 +399,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = WHILE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:93:6: ( 'while' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:93:8: 'while'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:91:6: ( 'while' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:91:8: 'while'
 			{
 			match("while"); 
 
@@ -420,8 +420,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:94:6: ( 'then' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:94:8: 'then'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:92:6: ( 'then' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:92:8: 'then'
 			{
 			match("then"); 
 
@@ -441,8 +441,8 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = END;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:95:6: ( 'end' )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:95:8: 'end'
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:93:6: ( 'end' )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:93:8: 'end'
 			{
 			match("end"); 
 
@@ -462,10 +462,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:97:6: ( ( '0' .. '9' )+ )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:97:8: ( '0' .. '9' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:95:6: ( ( '0' .. '9' )+ )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:95:8: ( '0' .. '9' )+
 			{
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:97:8: ( '0' .. '9' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:95:8: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -477,7 +477,7 @@ public class GramaticaLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:
+					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -514,10 +514,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:98:6: ( ( 'a' .. 'z' )+ )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:98:8: ( 'a' .. 'z' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:96:6: ( ( 'a' .. 'z' )+ )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:96:8: ( 'a' .. 'z' )+
 			{
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:98:8: ( 'a' .. 'z' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:96:8: ( 'a' .. 'z' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -529,7 +529,7 @@ public class GramaticaLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:
+					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:
 					{
 					if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -566,10 +566,10 @@ public class GramaticaLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:100:6: ( ( ' ' | '\\n' | '\\r' )+ )
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:100:8: ( ' ' | '\\n' | '\\r' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:98:6: ( ( ' ' | '\\n' | '\\r' )+ )
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:98:8: ( ' ' | '\\n' | '\\r' )+
 			{
-			// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:100:8: ( ' ' | '\\n' | '\\r' )+
+			// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:98:8: ( ' ' | '\\n' | '\\r' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -581,7 +581,7 @@ public class GramaticaLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:
+					// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:
 					{
 					if ( input.LA(1)=='\n'||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
@@ -616,7 +616,7 @@ public class GramaticaLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | DO | ELSE | IF | WHILE | THEN | END | INT | VAR | WS )
+		// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | DO | ELSE | IF | WHILE | THEN | END | INT | VAR | WS )
 		int alt4=23;
 		switch ( input.LA(1) ) {
 		case '(':
@@ -930,161 +930,161 @@ public class GramaticaLexer extends Lexer {
 		}
 		switch (alt4) {
 			case 1 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:10: T__13
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:10: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 2 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:16: T__14
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:16: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 3 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:22: T__15
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:22: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 4 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:28: T__16
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:28: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 5 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:34: T__17
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:34: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 6 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:40: T__18
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:40: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 7 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:46: T__19
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:46: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 8 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:52: T__20
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:52: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 9 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:58: T__21
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:58: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 10 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:64: T__22
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:64: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 11 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:70: T__23
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:70: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 12 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:76: T__24
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:76: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 13 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:82: T__25
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:82: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 14 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:88: T__26
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:88: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 15 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:94: DO
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:94: DO
 				{
 				mDO(); 
 
 				}
 				break;
 			case 16 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:97: ELSE
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:97: ELSE
 				{
 				mELSE(); 
 
 				}
 				break;
 			case 17 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:102: IF
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:102: IF
 				{
 				mIF(); 
 
 				}
 				break;
 			case 18 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:105: WHILE
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:105: WHILE
 				{
 				mWHILE(); 
 
 				}
 				break;
 			case 19 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:111: THEN
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:111: THEN
 				{
 				mTHEN(); 
 
 				}
 				break;
 			case 20 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:116: END
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:116: END
 				{
 				mEND(); 
 
 				}
 				break;
 			case 21 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:120: INT
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:120: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 22 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:124: VAR
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:124: VAR
 				{
 				mVAR(); 
 
 				}
 				break;
 			case 23 :
-				// C:\\Source\\Tradutores\\TGB\\gramatica-antlr\\Gramatica.g:1:128: WS
+				// C:\\Users\\Karolina\\Development\\UNISINOS\\gramatica-antlr\\Gramatica.g:1:128: WS
 				{
 				mWS(); 
 

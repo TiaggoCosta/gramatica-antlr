@@ -20,8 +20,8 @@ prog
 
 stat
     :
-	comandos
-	; 
+    comandos
+    ; 
 
 comandos
     :
@@ -32,13 +32,13 @@ comando
     : 
     atribuicao
     | iteracao
-	| condicao 
-	;
+    | condicao 
+    ;
 
 iteracao
     :
 	WHILE rel DO comandos
-	;
+    ;
 
 atribuicao
     :
@@ -49,14 +49,12 @@ atribuicao
 
 condicao
     :
-      IF rel THEN
-        (comandos)*
-        condicaoPart
+    IF rel THEN (comandos)* condicaoPart
     ;
 
 condicaoPart
     :
-      (ELSE (comandos)*)?
+    (ELSE (comandos)*)?
     ;
 
 
