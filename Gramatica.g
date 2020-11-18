@@ -37,7 +37,7 @@ comando
 
 iteracao
     :
-	'while' rel 'do' comandos
+	WHILE rel DO comandos
 	;
 
 atribuicao
@@ -49,22 +49,19 @@ atribuicao
 
 condicao
     :
-      //('if' rel 'then' comandos) teste2 
-      IF rel
-     	 (THEN comandos)?
-     	 (ELSE comandos)?
-	;
-	
-//teste2
-//    :	
-	//(ELSE comandos)
-	//|
-	//;
+      IF rel THEN
+        (comandos)*
+        condicaoPart
+    ;
+
+condicaoPart
+    :
+      (ELSE (comandos)*)?
+    ;
+
 
 expr returns [ double v ]
     :
-    //{if (result == true){
-    
     ( INT { $v = Double.parseDouble($INT.text); } {System.out.println("Lido valor constante: " + $v);}
     | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("Lido da mem�ria de vari�veis: " + $v);} )
     ( '+' {System.out.println("lido: + ");} e = expr {$v += $e.v;} {System.out.println("Resultado da soma: " + $v);}
@@ -73,7 +70,7 @@ expr returns [ double v ]
     | '/' {System.out.println("lido: / ");} e = expr {$v /= $e.v;} {System.out.println("Resultado da divisao: " + $v);}
     |
     )
-    | '(' e = expr {$v = $e.v;} ')' //}}
+    | '(' e = expr {$v = $e.v;} ')'
     ;
 
 rel returns [ boolean t ]
@@ -85,17 +82,19 @@ rel returns [ boolean t ]
     | '>'  {System.out.println("Lido expr rel: > " );} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " > "  + $d.v + " : " + $t); result = $t;} 
     | '<=' {System.out.println("Lido expr rel: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <= " + $d.v + " : " + $t); result = $t;}
     | '>=' {System.out.println("Lido expr rel: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " >= " + $d.v + " : " + $t); result = $t;}
-    )
+    )   
+    //{if (result == false) returns comandos;}  
     ;
 
-DO: 'do';
-ELSE: 'else';
-IF: 'if';
+DO   : 'do';
+ELSE : 'else';
+IF   : 'if';
 WHILE: 'while';
 THEN : 'then';
+END  : 'end';
 
-INT : ('0'..'9')+ ;
-VAR : ('a'..'z')+ ;
+INT  : ('0'..'9')+ ;
+VAR  : ('a'..'z')+ ;
 
-WS  : (' '|'\n'|'\r')+ {skip();} ;
+WS   : (' '|'\n'|'\r')+ {skip();} ;
 
