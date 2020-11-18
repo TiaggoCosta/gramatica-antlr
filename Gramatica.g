@@ -43,7 +43,7 @@ atribuicao
     :
     VAR ':=' expr 
     { memory.put($VAR.text, new Double($expr.v)); } 
-    { System.out.println("Variavel " + $VAR.text + " = " + $expr.v + " inserida na memï¿½ria"); }
+    { System.out.println("Variável " + $VAR.text + " = " + $expr.v + " inserida na memória"); }
     ;
 
 teste
@@ -60,11 +60,11 @@ alternativa
 expr returns [ double v ]
     :
     ( INT { $v = Double.parseDouble($INT.text); } {System.out.println("Lido valor constante: " + $v);}
-    | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("Lido da memï¿½ria de variï¿½veis: " + $v);} )
-    ( '+' {System.out.println("lido: + ");} e = expr {$v += $e.v;} {System.out.println("Resultado da soma: " + $v);}
-    | '-' {System.out.println("lido: - ");} e = expr {$v -= $e.v;} {System.out.println("Resultado da subtracao: " + $v);}
-    | '*' {System.out.println("lido: * ");} e = expr {$v *= $e.v;} {System.out.println("Resultado da multiplicacao: " + $v);}
-    | '/' {System.out.println("lido: / ");} e = expr {$v /= $e.v;} {System.out.println("Resultado da divisao: " + $v);}
+    | VAR { $v = memory.getOrDefault($VAR.text, 0.0); } {System.out.println("Lido da memória de variáveis: " + $v);} )
+    ( '+' {System.out.println("Lido: + ");} e = expr {$v += $e.v;} {System.out.println("Resultado da soma: " + $v);}
+    | '-' {System.out.println("Lido: - ");} e = expr {$v -= $e.v;} {System.out.println("Resultado da subtração: " + $v);}
+    | '*' {System.out.println("Lido: * ");} e = expr {$v *= $e.v;} {System.out.println("Resultado da multiplicação: " + $v);}
+    | '/' {System.out.println("Lido: / ");} e = expr {$v /= $e.v;} {System.out.println("Resultado da divisão: " + $v);}
     |
     )
     | '(' e = expr {$v = $e.v;} ')'
@@ -92,5 +92,5 @@ END  : 'end';
 INT  : ('0'..'9')+ ;
 VAR  : ('a'..'z')+ ;
 
-WS   : (' '|'\n'|'\r')+ {skip();} ;
+WS   : (' '|'\n'|'\r'|'\t')+ {skip();} ;
 
