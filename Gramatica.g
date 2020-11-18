@@ -10,7 +10,6 @@ options {
 
 @members {
     HashMap<String, Double> memory = new HashMap<>();
-    boolean result = false;
 }
 
 prog
@@ -32,7 +31,7 @@ comando
     : 
     atribuicao
     | iteracao
-    | condicao 
+    | teste 
     ;
 
 iteracao
@@ -47,16 +46,16 @@ atribuicao
     { System.out.println("Variavel " + $VAR.text + " = " + $expr.v + " inserida na mem�ria"); }
     ;
 
-condicao
+teste
     :
-    IF rel THEN (comandos)* condicaoPart
-    ;
-
-condicaoPart
-    :
-    (ELSE (comandos)*)?
-    ;
-
+	(IF rel THEN comandos) alternativa 
+	;
+	
+alternativa
+    :	
+	(ELSE comandos)
+	|
+	;
 
 expr returns [ double v ]
     :
@@ -74,14 +73,13 @@ expr returns [ double v ]
 rel returns [ boolean t ]
     : 
     ( e = expr ) 
-    ( '='  {System.out.println("Lido expr rel: = " );} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado expr rel " + $e.v + " = "  + $d.v + " : " + $t); result = $t;} 
-    | '<>' {System.out.println("Lido expr rel: <> ");} d = expr {$t = $e.v != $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <> " + $d.v + " : " + $t); result = $t;} 
-    | '<'  {System.out.println("Lido expr rel: < " );} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " < "  + $d.v + " : " + $t); result = $t;}
-    | '>'  {System.out.println("Lido expr rel: > " );} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " > "  + $d.v + " : " + $t); result = $t;} 
-    | '<=' {System.out.println("Lido expr rel: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <= " + $d.v + " : " + $t); result = $t;}
-    | '>=' {System.out.println("Lido expr rel: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " >= " + $d.v + " : " + $t); result = $t;}
+    ( '='  {System.out.println("Lido expr rel: = " );} d = expr {$t = $e.v == $d.v;} {System.out.println("Resultado expr rel " + $e.v + " = "  + $d.v + " : " + $t);} 
+    | '<>' {System.out.println("Lido expr rel: <> ");} d = expr {$t = $e.v != $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <> " + $d.v + " : " + $t);} 
+    | '<'  {System.out.println("Lido expr rel: < " );} d = expr {$t = $e.v <  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " < "  + $d.v + " : " + $t);}
+    | '>'  {System.out.println("Lido expr rel: > " );} d = expr {$t = $e.v >  $d.v;} {System.out.println("Resultado expr rel " + $e.v + " > "  + $d.v + " : " + $t);} 
+    | '<=' {System.out.println("Lido expr rel: <= ");} d = expr {$t = $e.v <= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " <= " + $d.v + " : " + $t);}
+    | '>=' {System.out.println("Lido expr rel: >= ");} d = expr {$t = $e.v >= $d.v;} {System.out.println("Resultado expr rel " + $e.v + " >= " + $d.v + " : " + $t);}
     )   
-    //{if (result == false) returns comandos;}  
     ;
 
 DO   : 'do';
